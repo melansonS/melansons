@@ -25,6 +25,55 @@ const About: NextPage = () => {
         </motion.div>
       </div>
       <Link href="/">Home</Link>
+      <div>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+        <p>LOREM IPSUM</p>
+      </div>
     </div>
   );
 };

@@ -5,3 +5,31 @@
 body {
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
+
+.hamburger {
+  @apply w-10 h-0.5 bg-white absolute top-4;
+  transition: all 0.7s ease;
+}
+
+.hamburger::before {
+  content: "";
+  transition: all 0.7s ease;
+  @apply w-10 h-0.5 bg-white absolute left-0 top-2;
+}
+
+.hamburger::after {
+  content: "";
+  transition: all 0.7s ease;
+  @apply w-10 h-0.5 bg-white absolute left-0 -top-2;
+}
+
+.activeHamburger {
+  transform: rotate(45deg);
+}
+.activeHamburger::before {
+  @apply top-0 rotate-90;
+}
+
+.activeHamburger::after {
+  @apply top-0 rotate-90;
+}
