@@ -1,10 +1,11 @@
 import type { NextPage } from "next";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import AnimatedPageContainer from "../components/layout/animatedPageContainer";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <AnimatedPageContainer>
       <main className="grow">
         <motion.div
           initial="hidden"
@@ -29,7 +30,7 @@ const Home: NextPage = () => {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
       </main>
-    </div>
+    </AnimatedPageContainer>
   );
 };
 
