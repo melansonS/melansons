@@ -1,20 +1,21 @@
-import Image from "next/image";
+import Link from "next/link";
+import { links } from "../../utils/navConsts";
 
 export default function LayoutFooter() {
   return (
     <footer className="text-center border-t-2 border-stone-300 py-12 mx-4">
-      <a
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div className="flex justify-between">
-          <span className="px-6">melansonS</span>
-          <span className="px-6">
-            Powered by <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </div>
-      </a>
+      <div className="flex justify-between">
+        <span className="flex px-6">
+          {links.map((link) => {
+            return (
+              <div className="px-3" key={`foot-nav-link-${link.name}`}>
+                <Link href={link.href}>{link.name}</Link>
+              </div>
+            );
+          })}
+        </span>
+        <span className="px-6">melansonS</span>
+      </div>
     </footer>
   );
 }

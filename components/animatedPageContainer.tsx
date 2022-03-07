@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import { motion } from "framer-motion";
+import { MENU_TRANSITION_DURATION } from "../utils/navConsts";
 
 type AnimatedPageContainerProps = {
   children: ReactNode;
@@ -18,7 +19,7 @@ const AnimatedPageContainer = ({ children }: AnimatedPageContainerProps): JSX.El
       animate="enter"
       exit="exit"
       variants={variants}
-      transition={{ type: { ease: "easeInOut" }, delay: 0.3 }}
+      transition={{ type: { ease: "easeInOut" }, delay: MENU_TRANSITION_DURATION }}
       className="flex flex-col items-start w-full p-20"
     >
       {children}
