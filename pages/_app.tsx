@@ -1,15 +1,24 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import Layout from "../components/layout/layout";
 import { AnimatePresence } from "framer-motion";
+import Navbar from "../components/navbar";
+import LayoutFooter from "../components/layout/layoutFooter";
+import LayoutHead from "../components/layout/layoutHead";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, router }: AppProps) {
+  console.log("router", router.route);
+  const url = `http://localhost:3000${router.route}`;
   return (
-    <AnimatePresence>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </AnimatePresence>
+    <div>
+      <LayoutHead />
+      <div className="flex flex-col mx-auto h-full max-w-screen-lg">
+        <Navbar />
+        <AnimatePresence exitBeforeEnter>
+          <Component {...pageProps} key={url} />
+        </AnimatePresence>
+        <LayoutFooter />
+      </div>
+    </div>
   );
 }
 
