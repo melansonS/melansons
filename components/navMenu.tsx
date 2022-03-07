@@ -2,6 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { links, MENU_TRANSITION_DURATION } from "../utils/navConsts";
+import useBreakPoints from "../utils/usebreakpoints";
 
 type NavMenuProps = {
   setShowMenu: (value: boolean) => void;
@@ -31,8 +32,16 @@ const menuItemVariants = {
   enter: { y: 0, opacity: 1, transition: { duration: 0.3 } },
 };
 
+const contactMeVariants = {
+  hidden: { x: "20vw", opacity: 0 },
+  enter: { x: 0, opacity: 1, transition: { duration: 0.5, delay: MENU_TRANSITION_DURATION * 3 } },
+};
+
 export default function NavMenu({ setShowMenu }: NavMenuProps) {
   const router = useRouter();
+  const breakpoint = useBreakPoints();
+
+  console.log(breakpoint);
 
   const handleNavigate = (href: string) => {
     setShowMenu(false);
@@ -48,7 +57,7 @@ export default function NavMenu({ setShowMenu }: NavMenuProps) {
       transition={{ duration: MENU_TRANSITION_DURATION }}
       className="fixed bg-zinc-800 w-full h-full top-0 left-0 "
     >
-      <div className="w-fit my-52 mx-auto flex flex-col sm:flex-row xs:flex-row">
+      <div className="w-2/3 h-2/3 text-center my-20 mx-auto flex justify-between flex-col md:flex-row">
         <motion.div className="p-10" variants={menuItemsContainerVariants}>
           {links.map((link) => {
             return (
@@ -68,8 +77,19 @@ export default function NavMenu({ setShowMenu }: NavMenuProps) {
             );
           })}
         </motion.div>
-        <div className="p-10">---------</div>
-        <div className="p-10">melansons</div>
+        <div className="w-full h-1 border-stone-300 border-t-2 md:border-r-2 md:h-full md:w-1 md:border-t-0" />
+        <div className="flex flex-row justify-end md:flex-col">
+          <motion.div
+            initial="hidden"
+            animate="enter"
+            variants={contactMeVariants}
+            className="h-fit pb-6 text-left w-1/2"
+          >
+            <h4 className="text-2xl pb-4">Get in Touch</h4>
+            <p className="text-md pb-2">LinkedIn</p>
+            <p className="text-md pb-2">Github</p>
+          </motion.div>
+        </div>
       </div>
     </motion.div>
   );
