@@ -18,7 +18,7 @@ const AnimatedPageContainer = ({ children }: AnimatedPageContainerProps): JSX.El
       animate="enter"
       exit="exit"
       variants={variants}
-      transition={{ type: { ease: "easeInOut" } }}
+      transition={{ type: { ease: "easeInOut" }, delay: 0.3 }}
       className="flex flex-col items-start w-full p-20"
     >
       {children}
