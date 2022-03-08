@@ -5,12 +5,16 @@ export default function Socials() {
     <div>
       <ul>
         <li>
-          <a href="https://www.linkedin.com/in/samuel-melanson/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/samuel-melanson/"
+            target="_blank"
+            className="hover:underline"
+          >
             LinkedIn
           </a>
         </li>
         <li>
-          <a href="https://github.com/melansonS" target="_blank">
+          <a href="https://github.com/melansonS" target="_blank" className="hover:underline">
             Github
           </a>
         </li>

@@ -62,15 +62,14 @@ export default function NavMenu({ setShowMenu }: NavMenuProps) {
       <div className="w-2/3 h-full text-center mx-auto pt-16 pb-16 flex justify-between flex-col md:flex-row">
         <motion.div className="p-10" variants={menuItemsContainerVariants}>
           {links.map((link) => {
+            const isCurrent = router.route === link.href;
             return (
-              <motion.div
-                className="flex"
-                key={`motion-nav-link-${link.name}`}
-                variants={menuItemVariants}
-              >
-                {router.route === link.href && <div>**</div>}
+              <motion.div key={`motion-nav-link-${link.name}`} variants={menuItemVariants}>
                 <button
-                  className="inline"
+                  className={`
+                  inline text-4xl py-6
+                  hover:underline
+                  ${isCurrent ? "text-sky-800" : ""}`}
                   onClick={() => {
                     handleNavigate(link.href);
                   }}
