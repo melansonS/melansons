@@ -64,11 +64,13 @@ export default function NavMenu({ setShowMenu }: NavMenuProps) {
           {links.map((link) => {
             return (
               <motion.div
-                className=""
+                className="flex"
                 key={`motion-nav-link-${link.name}`}
                 variants={menuItemVariants}
               >
+                {router.route === link.href && <div>**</div>}
                 <button
+                  className="inline"
                   onClick={() => {
                     handleNavigate(link.href);
                   }}
