@@ -6,6 +6,7 @@ const Work: NextPage = () => {
     <AnimatedPageContainer>
       <div>
         <h1 className="text-3xl pb-6 font-bold">Work</h1>
+        <p>Coming soon...</p>
       </div>
     </AnimatedPageContainer>
   );
