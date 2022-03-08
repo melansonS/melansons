@@ -59,8 +59,8 @@ export default function NavMenu({ setShowMenu }: NavMenuProps) {
       transition={{ duration: MENU_TRANSITION_DURATION }}
       className="fixed bg-zinc-800 w-full h-full top-0 left-0 "
     >
-      <div className="w-2/3 h-full text-center mx-auto pt-16 pb-16 flex justify-between flex-col md:flex-row">
-        <motion.div className="p-10" variants={menuItemsContainerVariants}>
+      <div className="w-2/3 h-full mx-auto pt-16 pb-16 flex justify-between flex-col md:flex-row md:text-center ">
+        <motion.div className="p-10 w-full" variants={menuItemsContainerVariants}>
           {links.map((link) => {
             const isCurrent = router.route === link.href;
             return (
@@ -81,12 +81,12 @@ export default function NavMenu({ setShowMenu }: NavMenuProps) {
           })}
         </motion.div>
         <div className="w-full h-1 border-stone-300 border-t-2 md:border-r-2 md:h-full md:w-1 md:border-t-0" />
-        <div className="flex flex-row justify-end md:flex-col">
+        <div className="flex flex-row w-full md:flex-col md:justify-end ">
           <motion.div
             initial="hidden"
             animate="enter"
             variants={contactMeVariants}
-            className="h-fit pb-6 text-left w-1/2"
+            className="h-fit pb-6 pl-6 text-left"
           >
             <h4 className="text-2xl pb-4">Get in Touch</h4>
             <Socials />
