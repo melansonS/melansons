@@ -57,7 +57,7 @@ export default function NavMenu({ toggleShowMenu }: NavMenuProps) {
       exit="exit"
       variants={menuVariants}
       transition={{ duration: MENU_TRANSITION_DURATION }}
-      className="fixed bg-zinc-800 w-full h-full top-0 left-0 z-10"
+      className="fixed bg-zinc-800 w-full h-full top-0 left-0 z-10 overflow-scroll"
     >
       <div className="w-2/3 h-full mx-auto pt-16 pb-16 flex justify-between flex-col md:flex-row md:text-center ">
         <motion.div className="p-10 w-full" variants={menuItemsContainerVariants}>
