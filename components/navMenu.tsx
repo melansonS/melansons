@@ -6,7 +6,7 @@ import useBreakPoints from "../utils/usebreakpoints";
 import Socials from "./socials";
 
 type NavMenuProps = {
-  setShowMenu: (value: boolean) => void;
+  toggleShowMenu: (value: boolean) => void;
 };
 
 const menuVariants = {
@@ -39,14 +39,15 @@ const contactMeVariants = {
   enter: { x: 0, opacity: 1, transition: { duration: 0.5, delay: MENU_TRANSITION_DURATION * 3 } },
 };
 
-export default function NavMenu({ setShowMenu }: NavMenuProps) {
-  const router = useRouter();
-  const breakpoint = useBreakPoints();
+const menuItemHover = {
+  x: 10,
+};
 
-  console.log(breakpoint);
+export default function NavMenu({ toggleShowMenu }: NavMenuProps) {
+  const router = useRouter();
 
   const handleNavigate = (href: string) => {
-    setShowMenu(false);
+    toggleShowMenu(false);
     router.push(href);
   };
 
@@ -57,14 +58,18 @@ export default function NavMenu({ setShowMenu }: NavMenuProps) {
       exit="exit"
       variants={menuVariants}
       transition={{ duration: MENU_TRANSITION_DURATION }}
-      className="fixed bg-zinc-800 w-full h-full top-0 left-0 "
+      className="fixed bg-zinc-800 w-full h-full top-0 left-0 z-10"
     >
       <div className="w-2/3 h-full mx-auto pt-16 pb-16 flex justify-between flex-col md:flex-row md:text-center ">
         <motion.div className="p-10 w-full" variants={menuItemsContainerVariants}>
           {links.map((link) => {
             const isCurrent = router.route === link.href;
             return (
-              <motion.div key={`motion-nav-link-${link.name}`} variants={menuItemVariants}>
+              <motion.div
+                key={`motion-nav-link-${link.name}`}
+                variants={menuItemVariants}
+                whileHover={menuItemHover}
+              >
                 <button
                   className={`
                   inline text-4xl py-6
