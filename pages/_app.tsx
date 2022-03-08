@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <div>
       <LayoutHead />
-      <div className="flex flex-col mx-auto h-full max-w-screen-lg">
+      <div className="flex flex-col justify-between mx-auto h-full min-h-screen max-w-screen-lg">
         <Navbar />
         <AnimatePresence exitBeforeEnter>
           <Component {...pageProps} key={url} />

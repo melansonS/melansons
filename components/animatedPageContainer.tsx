@@ -13,7 +13,7 @@ const variants = {
 };
 
 const AnimatedPageContainer = ({ children }: AnimatedPageContainerProps): JSX.Element => (
-  <div className="min-h-screen">
+  <div className="grow">
     <motion.main
       initial="hidden"
       animate="enter"
