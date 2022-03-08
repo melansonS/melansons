@@ -3,7 +3,7 @@ import Head from "next/head";
 export default function LayoutHead() {
   return (
     <Head>
-      <title>melanonS</title>
+      <title>melansonS</title>
       <meta name="description" content="Samuel Melanson's web portfolio" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
