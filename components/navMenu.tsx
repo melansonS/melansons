@@ -2,7 +2,6 @@ import React from "react";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { links, MENU_TRANSITION_DURATION } from "../utils/navConsts";
-import useBreakPoints from "../utils/usebreakpoints";
 import Socials from "./socials";
 
 type NavMenuProps = {

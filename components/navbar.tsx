@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import NavMenu from "./navMenu";
+import { useRouter } from "next/router";
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    setShowMenu(false);
+  }, [router.route]);
 
   const toggleShowMenu = (value: boolean) => {
     setShowMenu(value);
