@@ -6,7 +6,7 @@ export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <header className="flex justify-between align-middle px-16 my-12">
+    <header className="bg-zinc-900 border-stone-300 border-b-2 sticky flex justify-between align-middle mx-4 px-4 top-0 pt-8 pb-8 sm:pt-12 sm:px-12 sm:relative sm:border-b-0">
       <div className="flex align-middle">
         <button className="relative h-10 w-10 z-10" onClick={() => setShowMenu(!showMenu)}>
           <div className={`hamburger ${showMenu ? "activeHamburger" : ""}`}></div>

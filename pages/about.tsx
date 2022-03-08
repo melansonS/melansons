@@ -21,7 +21,7 @@ const About: NextPage = () => {
         <br></br>
         <p>
           Always happy to hear about new and exciting opporunities. Feel free to reach out if you've
-          got any questions or just want to chat.
+          got any questions or if you'd just like to chat.
         </p>
       </div>
     </AnimatedPageContainer>

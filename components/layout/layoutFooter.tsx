@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { links } from "../../utils/navConsts";
+import Socials from "../socials";
 
 export default function LayoutFooter() {
   return (
@@ -14,7 +15,10 @@ export default function LayoutFooter() {
             );
           })}
         </span>
-        <span className="px-6">melansonS</span>
+        <div>
+          <span className="px-6">melansons</span>
+          <Socials />
+        </div>
       </div>
     </footer>
   );

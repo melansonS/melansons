@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { links, MENU_TRANSITION_DURATION } from "../utils/navConsts";
 import useBreakPoints from "../utils/usebreakpoints";
+import Socials from "./socials";
 
 type NavMenuProps = {
   setShowMenu: (value: boolean) => void;
@@ -12,6 +13,7 @@ const menuVariants = {
   hidden: { x: `-100%` },
   enter: {
     x: 0,
+    transition: { duration: 0.5 },
   },
   exit: { x: "-100%" },
 };
@@ -57,7 +59,7 @@ export default function NavMenu({ setShowMenu }: NavMenuProps) {
       transition={{ duration: MENU_TRANSITION_DURATION }}
       className="fixed bg-zinc-800 w-full h-full top-0 left-0 "
     >
-      <div className="w-2/3 h-2/3 text-center my-20 mx-auto flex justify-between flex-col md:flex-row">
+      <div className="w-2/3 h-full text-center mx-auto pt-16 pb-16 flex justify-between flex-col md:flex-row">
         <motion.div className="p-10" variants={menuItemsContainerVariants}>
           {links.map((link) => {
             return (
@@ -86,8 +88,7 @@ export default function NavMenu({ setShowMenu }: NavMenuProps) {
             className="h-fit pb-6 text-left w-1/2"
           >
             <h4 className="text-2xl pb-4">Get in Touch</h4>
-            <p className="text-md pb-2">LinkedIn</p>
-            <p className="text-md pb-2">Github</p>
+            <Socials />
           </motion.div>
         </div>
       </div>

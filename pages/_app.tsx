@@ -6,8 +6,8 @@ import LayoutFooter from "../components/layout/layoutFooter";
 import LayoutHead from "../components/layout/layoutHead";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
-  console.log("router", router.route);
   const url = `http://localhost:3000${router.route}`;
+
   return (
     <div>
       <LayoutHead />
