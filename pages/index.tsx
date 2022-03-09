@@ -18,13 +18,12 @@ const variants = {
 const pyramidsHover = {
   scale: 1.1,
   opacity: 1,
-  transition: { duration: 0.8 },
 };
 
 const Home: NextPage = () => {
   return (
     <AnimaterPageContainer>
-      <div className="pt-32">
+      <div className="pt-2">
         <div className="w-full flex justify-center text-3xl pt-4 transition-colors">
           <h1 className="text-3xl pb-6 font-bold"> Hi, I'm Samuel Melanson</h1>
         </div>
@@ -34,18 +33,22 @@ const Home: NextPage = () => {
           some flavour of React and Node as well a whichever database (<code>SQL</code> or{" "}
           <code>NoSQl</code>) is fitting.
         </p>
-        <div className="flex justify-center w-full  pt-16 pb-8">
-          <motion.img
+        <div className="flex justify-center w-full pt-12 pb-8 z-0">
+          <motion.div
             initial="hidden"
             animate="show"
             variants={variants}
             whileHover={pyramidsHover}
-            whileTap={pyramidsHover}
-            className="hover:cursor-pointer"
-            src="/pyramids.gif"
-            alt="rotating prism"
-            style={{ width: "190px", height: "190px" }}
-          />
+            transition={{ duration: 0.8 }}
+            className="select-none z-0 hover:cursor-pointer"
+          >
+            <img
+              src="/pyramids.gif"
+              alt="rotating prism"
+              style={{ width: "190px", height: "190px" }}
+              className="pointer-events-none"
+            ></img>
+          </motion.div>
         </div>
       </div>
     </AnimaterPageContainer>

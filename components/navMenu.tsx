@@ -34,7 +34,7 @@ const menuItemVariants = {
 };
 
 const contactMeVariants = {
-  hidden: { x: "20vw", opacity: 0 },
+  hidden: { x: 40, opacity: 0 },
   enter: { x: 0, opacity: 1, transition: { duration: 0.5, delay: MENU_TRANSITION_DURATION * 3 } },
 };
 
@@ -59,7 +59,7 @@ export default function NavMenu({ toggleShowMenu }: NavMenuProps) {
       transition={{ duration: MENU_TRANSITION_DURATION }}
       className="fixed bg-zinc-800 w-full h-full top-0 left-0 z-10 overflow-scroll"
     >
-      <div className="w-2/3 h-full mx-auto pt-16 pb-16 flex justify-between flex-col md:flex-row md:text-center ">
+      <div className="w-2/3 h-full mx-auto pt-16 pb-16 flex justify-between flex-col md:flex-row md:text-center">
         <motion.div className="p-10 w-full" variants={menuItemsContainerVariants}>
           {links.map((link) => {
             const isCurrent = router.route === link.href;
@@ -71,8 +71,9 @@ export default function NavMenu({ toggleShowMenu }: NavMenuProps) {
               >
                 <button
                   className={`
-                  inline text-4xl py-6
+                  inline text-3xl py-6
                   hover:underline
+                  md:text-4xl
                   ${isCurrent ? "text-sky-800" : ""}`}
                   onClick={() => {
                     handleNavigate(link.href);
@@ -90,9 +91,9 @@ export default function NavMenu({ toggleShowMenu }: NavMenuProps) {
             initial="hidden"
             animate="enter"
             variants={contactMeVariants}
-            className="h-fit pb-6 pl-6 text-left"
+            className="h-fit pb-6 pl-6 text-left md:pl-16"
           >
-            <h4 className="text-2xl pb-4">Get in Touch</h4>
+            <h4 className="text-2xl pb-4">Get in touch</h4>
             <Socials />
           </motion.div>
         </div>
