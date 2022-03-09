@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import type { NextPage } from "next";
 import AnimaterPageContainer from "../components/animatedPageContainer";
+import PageTitle from "../components/pageTitle";
 
 const variants = {
   hidden: {
@@ -25,13 +26,13 @@ const Home: NextPage = () => {
     <AnimaterPageContainer>
       <div className="pt-2">
         <div className="w-full flex justify-center text-3xl pt-4 transition-colors">
-          <h1 className="text-3xl pb-6 font-bold"> Hi, I'm Samuel Melanson</h1>
+          <PageTitle content="Hi, I'm Samuel Melanson" />
         </div>
         <p>
           I am a full stack web developer. I spend my days working with HTML CSS, and Javascript
           (except it's really <code>Typescript</code>). Most of the things I build these days use
-          some flavour of React and Node as well a whichever database (<code>SQL</code> or{" "}
-          <code>NoSQl</code>) is fitting.
+          some flavour of React and Node as well a whichever database (<code>SQL</code> -{" "}
+          <code>NoSQl</code>) fits the project
         </p>
         <div className="flex justify-center w-full pt-12 pb-8 z-0">
           <motion.div

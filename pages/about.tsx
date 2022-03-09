@@ -1,11 +1,12 @@
 import type { NextPage } from "next";
 import AnimatedPageContainer from "../components/animatedPageContainer";
+import PageTitle from "../components/pageTitle";
 
 const About: NextPage = () => {
   return (
     <AnimatedPageContainer>
       <div>
-        <h1 className="text-3xl pb-6 font-bold">About</h1>
+        <PageTitle content="About" />
         <p>
           I am a Montreal based software developer. But beyond that, I am also a Music loving, Music
           playing, Book reading, Sunshine seeking, Game playing, Netflix binging kind of guy. I am
