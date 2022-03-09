@@ -13,7 +13,7 @@ const variants = {
 };
 
 const AnimatedPageContainer = ({ children }: AnimatedPageContainerProps): JSX.Element => (
-  <div className="grow">
+  <div className="flex grow">
     <motion.main
       initial="hidden"
       animate="enter"
