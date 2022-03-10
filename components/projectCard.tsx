@@ -1,5 +1,5 @@
 import Link from "next/link";
-import AnimateOnScrollIntoView from "./AnimateOnScrollIntoView";
+import AnimateOnScrollIntoView from "./animateOnScrollIntoView";
 
 interface IProjectCardProps {
   name: string;
