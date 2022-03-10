@@ -8,7 +8,7 @@ const variants = {
     opacity: 0,
   },
   show: {
-    opacity: 0.5,
+    opacity: 0.7,
     transition: {
       delay: 0.5,
       duration: 1.5,
@@ -25,7 +25,7 @@ const Home: NextPage = () => {
   return (
     <AnimaterPageContainer>
       <div className="pt-2">
-        <div className="w-full flex justify-center text-3xl pt-4 transition-colors">
+        <div className="w-full flex justify-center text-3xl pt-4">
           <PageTitle content="Hi, I'm Samuel Melanson" />
         </div>
         <p>

@@ -9,7 +9,10 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body className="bg-zinc-900 text-stone-300 ">
+      <body
+        className="text-zinc-900 bg-stone-300 transition-colors
+                   dark:bg-zinc-900 dark:text-stone-300"
+      >
         <Main />
         <NextScript />
       </body>

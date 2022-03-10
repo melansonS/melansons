@@ -7,20 +7,20 @@ body {
 }
 
 .hamburger {
-  @apply w-10 h-0.5 bg-white absolute top-4;
+  @apply w-10 h-0.5 bg-zinc-900 dark:bg-stone-300 absolute top-4;
   transition: all 0.5s ease;
 }
 
 .hamburger::before {
   content: "";
   transition: all 0.5s ease;
-  @apply w-10 h-0.5 bg-white absolute left-0 top-2;
+  @apply w-10 h-0.5 bg-zinc-900 dark:bg-stone-300 absolute left-0 top-2;
 }
 
 .hamburger::after {
   content: "";
   transition: all 0.5s ease;
-  @apply w-10 h-0.5 bg-white absolute left-0 -top-2;
+  @apply w-10 h-0.5 bg-zinc-900 dark:bg-stone-300 absolute left-0 -top-2;
 }
 
 .activeHamburger {

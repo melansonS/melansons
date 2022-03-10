@@ -57,7 +57,7 @@ export default function NavMenu({ toggleShowMenu }: NavMenuProps) {
       exit="exit"
       variants={menuVariants}
       transition={{ duration: MENU_TRANSITION_DURATION }}
-      className="fixed bg-zinc-800 w-full h-full top-0 left-0 z-10 overflow-scroll"
+      className="fixed bg-stone-200 dark:bg-zinc-800 w-full h-full top-0 left-0 z-10 overflow-scroll"
     >
       <div className="w-2/3 h-full mx-auto pt-16 pb-16 flex justify-between flex-col md:flex-row md:text-center">
         <motion.div className="p-10 w-full" variants={menuItemsContainerVariants}>
@@ -70,22 +70,19 @@ export default function NavMenu({ toggleShowMenu }: NavMenuProps) {
                 whileHover={menuItemHover}
               >
                 <button
-                  className={`
-                  inline text-3xl py-6
-                  hover:underline
-                  md:text-4xl
-                  ${isCurrent ? "text-sky-800" : ""}`}
+                  className="inline text-3xl py-6 md:text-4xl"
                   onClick={() => {
                     handleNavigate(link.href);
                   }}
                 >
-                  {link.name}
+                  {isCurrent ? "◦ " : ""}
+                  <span className="hover:underline">{link.name}</span>
                 </button>
               </motion.div>
             );
           })}
         </motion.div>
-        <div className="w-full h-1 border-stone-300 border-t-2 md:border-r-2 md:h-full md:w-1 md:border-t-0" />
+        <div className="w-full h-1 border-zinc-900 dark:border-stone-300 border-t-2 md:border-r-2 md:h-full md:w-1 md:border-t-0" />
         <div className="flex flex-row w-full md:flex-col md:justify-end ">
           <motion.div
             initial="hidden"
