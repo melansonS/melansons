@@ -8,15 +8,18 @@ const getThemeString = (isDakr: boolean): string => (isDakr ? "dark" : "light");
 
 const variants = {
   hidden: {
-    y: 40,
+    y: 20,
     opacity: 0,
   },
   show: {
     y: 0,
     opacity: 1,
+    transition: {
+      duration: 0.3,
+    },
   },
   exit: {
-    y: -40,
+    y: -45,
     opacity: 0,
     transition: {
       duration: 0.3,
@@ -54,7 +57,7 @@ const DarkmodeToggle = () => {
   }, []);
 
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence initial={false} exitBeforeEnter>
       <motion.button
         initial="hidden"
         animate="show"
@@ -65,9 +68,9 @@ const DarkmodeToggle = () => {
         className="pl-4 md:pl-6"
       >
         {isDarkmode ? (
-          <SunIcon height={breakpoint === "sm" ? 20 : 30} width={breakpoint === "sm" ? 20 : 30} />
+          <SunIcon height={breakpoint === "sm" ? 24 : 30} width={breakpoint === "sm" ? 24 : 30} />
         ) : (
-          <MoonIcon height={breakpoint === "sm" ? 20 : 30} width={breakpoint === "sm" ? 20 : 30} />
+          <MoonIcon height={breakpoint === "sm" ? 24 : 30} width={breakpoint === "sm" ? 24 : 30} />
         )}
       </motion.button>
     </AnimatePresence>

@@ -9,7 +9,7 @@ type AnimatedPageContainerProps = {
 const variants = {
   hidden: { opacity: 0, y: 20 },
   enter: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: 30 },
+  exit: { opacity: 0, y: 30, transition: { duraction: 0.1 } },
 };
 
 const AnimatedPageContainer = ({ children }: AnimatedPageContainerProps): JSX.Element => (
