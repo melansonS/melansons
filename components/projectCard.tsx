@@ -5,6 +5,7 @@ interface IProjectCardProps {
   name: string;
   description: string;
   reverse: boolean;
+  isWork?: boolean;
 }
 
 const variants = {
@@ -20,18 +21,17 @@ const variants = {
   },
 };
 
-const ProjectCard = ({ name, description, reverse }: IProjectCardProps) => {
+const ProjectCard = ({ name, description, reverse, isWork = false }: IProjectCardProps) => {
   return (
     <AnimateOnScrollIntoView variants={variants} animateOut>
       <div className="py-12 w-ful">
-        <Link href={`/work/${name}`}>
+        <Link href={`/${isWork ? "work" : "projects"}/${name}`}>
           <div
             className={`flex flex-col p-6 
           ${reverse ? "md:flex-row-reverse" : "md:flex-row"}
           hover:cursor-pointer`}
           >
             <img src="https://placeimg.com/300/400/any"></img>
-
             <div>
               <h1 className="text-2xl font-bold pb-8">{name}</h1>
               <p>{description}</p>

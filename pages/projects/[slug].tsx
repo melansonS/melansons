@@ -1,6 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import md from "markdown-it";
+import AnimatedPageContainer from "../../components/animatedPageContainer";
 import PageTitle from "../../components/pageTitle";
 
 interface StaticSlugParams {
@@ -21,15 +22,15 @@ export interface IStaticProjectProps {
   content: string;
 }
 
-const Projects = ({ frontmatter, content }: IStaticProjectProps) => {
+const Project = ({ frontmatter, content }: IStaticProjectProps) => {
   return (
-    <div className=" mx-auto">
+    <AnimatedPageContainer>
       <PageTitle content={frontmatter.title} />
       <div
-        className="prose dark:prose-invert"
+        className="prose max-w-none dark:prose-invert"
         dangerouslySetInnerHTML={{ __html: md().render(content) }}
       />
-    </div>
+    </AnimatedPageContainer>
   );
 };
 
@@ -57,4 +58,4 @@ export async function getStaticProps({ params: { slug } }: StaticSlugParams) {
   };
 }
 
-export default Projects;
+export default Project;

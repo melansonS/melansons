@@ -10,7 +10,7 @@ export default function Navbar() {
 
   useEffect(() => {
     setShowMenu(false);
-  }, [router.route]);
+  }, [router.asPath]);
 
   const toggleShowMenu = (value: boolean) => {
     setShowMenu(value);

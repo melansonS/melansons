@@ -1,5 +1,5 @@
 ---
-title: "Next.js page options and how they work"
+title: "test"
 description: "How to use pages in Next.js exploring the options"
 images: images/22-09-2021.jpg
 tags:
@@ -9,6 +9,7 @@ tags:
 # The main content
 
 Well howdy and hello
+![image info](/pyramids.gif "pyramids")
 
 ---
 

@@ -1,13 +1,13 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import { links, MENU_TRANSITION_DURATION } from "../utils/navConsts";
+import { links, projectLinks, MENU_TRANSITION_DURATION } from "../utils/navConsts";
 import Socials from "./socials";
-import ProjectLinks from "./projectLinks";
+import Link from "next/link";
 
-type NavMenuProps = {
+interface INavMenuProps {
   toggleShowMenu: (value: boolean) => void;
-};
+}
 
 const menuVariants = {
   hidden: { x: `-100%` },
@@ -43,7 +43,7 @@ const menuItemHover = {
   x: 10,
 };
 
-export default function NavMenu({ toggleShowMenu }: NavMenuProps) {
+export default function NavMenu({ toggleShowMenu }: INavMenuProps) {
   const router = useRouter();
 
   const handleNavigate = (href: string) => {
@@ -58,10 +58,10 @@ export default function NavMenu({ toggleShowMenu }: NavMenuProps) {
       exit="exit"
       variants={menuVariants}
       transition={{ duration: MENU_TRANSITION_DURATION }}
-      className="fixed bg-stone-200 dark:bg-zinc-800 w-full h-full top-0 left-0 z-10 overflow-scroll"
+      className="fixed bg-stone-200 dark:bg-zinc-800 w-full h-full top-0 left-0 z-10 overflow-auto"
     >
-      <div className="w-2/3 h-full mx-auto pt-16 pb-16 flex justify-between flex-col md:flex-row md:text-center">
-        <motion.div className="p-10 w-full" variants={menuItemsContainerVariants}>
+      <div className="w-2/3 h-full mx-auto pt-16 pb-16 flex justify-between flex-col md:flex-row">
+        <motion.div className="p-10 pt-2 w-full md:p-10" variants={menuItemsContainerVariants}>
           {links.map((link) => {
             const isCurrent = router.route === link.href;
             return (
@@ -71,7 +71,7 @@ export default function NavMenu({ toggleShowMenu }: NavMenuProps) {
                 whileHover={menuItemHover}
               >
                 <button
-                  className="inline text-3xl py-6 md:text-4xl"
+                  className="py-3 text-3xl md:py-6 md:text-4xl"
                   onClick={() => {
                     handleNavigate(link.href);
                   }}
@@ -79,6 +79,24 @@ export default function NavMenu({ toggleShowMenu }: NavMenuProps) {
                   {isCurrent ? "◦ " : ""}
                   <span className="hover:underline">{link.name}</span>
                 </button>
+              </motion.div>
+            );
+          })}
+          {projectLinks.map((projectLink) => {
+            const isCurrent = router.asPath === `/projects${projectLink.href}`;
+            return (
+              <motion.div
+                key={`motion-nav-project-${projectLink.name}`}
+                variants={menuItemVariants}
+                whileHover={menuItemHover}
+                className="pb-2 text-lg md:pb-4 md:text-xl"
+              >
+                <Link href={`/projects${projectLink.href}`}>
+                  <span className="hover:underline hover:cursor-pointer">
+                    {isCurrent ? "◦ " : ""}
+                    {projectLink.name}
+                  </span>
+                </Link>
               </motion.div>
             );
           })}
@@ -93,7 +111,6 @@ export default function NavMenu({ toggleShowMenu }: NavMenuProps) {
           >
             <h4 className="text-2xl pb-4">Get in touch</h4>
             <Socials />
-            <ProjectLinks />
           </motion.div>
         </div>
       </div>
