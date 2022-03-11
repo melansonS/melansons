@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { links, MENU_TRANSITION_DURATION } from "../utils/navConsts";
 import Socials from "./socials";
+import ProjectLinks from "./projectLinks";
 
 type NavMenuProps = {
   toggleShowMenu: (value: boolean) => void;
@@ -92,6 +93,7 @@ export default function NavMenu({ toggleShowMenu }: NavMenuProps) {
           >
             <h4 className="text-2xl pb-4">Get in touch</h4>
             <Socials />
+            <ProjectLinks />
           </motion.div>
         </div>
       </div>

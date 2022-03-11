@@ -1,4 +1,9 @@
-export const links: { name: string; href: string }[] = [
+interface ILink {
+  name: string;
+  href: string;
+}
+
+export const links: ILink[] = [
   {
     name: "home",
     href: "/",
@@ -10,6 +15,17 @@ export const links: { name: string; href: string }[] = [
   {
     name: "work",
     href: "/work",
+  },
+  {
+    name: "projects",
+    href: "/projects",
+  },
+];
+
+export const projectLinks: ILink[] = [
+  {
+    name: "test",
+    href: "/test",
   },
 ];
 
