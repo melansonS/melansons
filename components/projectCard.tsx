@@ -44,7 +44,7 @@ const ProjectCard = ({ name, index, description, reverse, isWork = false }: IPro
         whileHover="hover"
         whileTap="hover"
         whileFocus="hover"
-        className="outline-zinc-900 my-20 md:my-12 md:mx-8"
+        className="outline-zinc-900 my-8 md:my-12 md:mx-8"
         tabIndex={0}
       >
         <Link href={`/${isWork ? "work" : "portfolio"}/${name}`}>
@@ -61,7 +61,7 @@ const ProjectCard = ({ name, index, description, reverse, isWork = false }: IPro
               <motion.img
                 variants={imgVariants}
                 className="h-full w-full"
-                src="https://placeimg.com/200/300/any"
+                src="https://picsum.photos/200/300"
               />
             </div>
             <div className={`grow relative ${reverse ? "pr-6" : "md:pl-12"}`}>
