@@ -16,6 +16,7 @@ const Work: NextPage = () => {
             name={project.name}
             description={project.description}
             reverse={index % 2 === 0}
+            index={index}
           />
         );
       })}
