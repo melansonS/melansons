@@ -15,6 +15,7 @@ interface PojectFrontMatter {
   description: string;
   tags: string[];
   images: string[];
+  orderIndex: number;
 }
 
 export interface IStaticProjectProps {

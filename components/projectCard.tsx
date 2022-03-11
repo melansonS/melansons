@@ -37,7 +37,7 @@ const imgVariants = {
 const ProjectCard = ({ name, index, description, reverse, isWork = false }: IProjectCardProps) => {
   const breakpoint = useBreakPoints();
   return (
-    <AnimateOnScrollIntoView variants={scrollVariants} animateOut>
+    <AnimateOnScrollIntoView variants={scrollVariants}>
       <motion.div
         initial="rest"
         animate="rest"

@@ -2,6 +2,7 @@
 title: "boulette"
 description: "Play Charade-like games over video chat!"
 images: images/22-09-2021.jpg
+orderIndex: 2
 tags:
   - nextjs
 ---

@@ -2,6 +2,7 @@
 title: "grouped"
 description: "Organize your people"
 images: images/22-09-2021.jpg
+orderIndex: 3
 tags:
   - nextjs
 ---

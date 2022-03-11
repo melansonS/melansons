@@ -6,12 +6,45 @@ import fs from "fs";
 import matter from "gray-matter";
 
 import { IStaticProjectProps } from "./[slug]";
+import AnimateOnScrollIntoView from "../../components/animateOnScrollIntoView";
+
+const ellipsesScrollVariants = {
+  hidden: {
+    opacity: 0,
+    y: 15,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+    },
+  },
+};
+const moreScrollVariants = {
+  hidden: {
+    opacity: 0,
+    y: 15,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.4,
+      duration: 0.8,
+    },
+  },
+};
 
 const Projects = ({ projects }: { projects: IStaticProjectProps[] }) => {
+  const orderedProjects = projects.sort(
+    (a, b) => a.frontmatter.orderIndex - b.frontmatter.orderIndex
+  );
+
   return (
     <AnimatedPageContainer>
       <PageTitle content="Projects" />
-      {projects.map((project, index) => {
+      {orderedProjects.map((project, index) => {
         return (
           <ProjectCard
             key={project.frontmatter.title}
@@ -22,6 +55,19 @@ const Projects = ({ projects }: { projects: IStaticProjectProps[] }) => {
           />
         );
       })}
+      <AnimateOnScrollIntoView variants={ellipsesScrollVariants} animateOut>
+        <p className="text-center mt-6 font-bold text-2xl">...</p>
+      </AnimateOnScrollIntoView>
+      <AnimateOnScrollIntoView variants={moreScrollVariants} animateOut>
+        <div className="text-center mt-4 mb-12 font-bold text-xl">
+          <p>
+            more on{" "}
+            <a href="https://github.com/melansonS" target="_blank" className="hover:underline">
+              Github
+            </a>
+          </p>
+        </div>
+      </AnimateOnScrollIntoView>
     </AnimatedPageContainer>
   );
 };
