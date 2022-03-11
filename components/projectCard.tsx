@@ -1,14 +1,15 @@
 import Link from "next/link";
 import AnimateOnScrollIntoView from "./animateOnScrollIntoView";
-
+import { motion } from "framer-motion";
 interface IProjectCardProps {
   name: string;
   description: string;
   reverse: boolean;
   isWork?: boolean;
+  index: number;
 }
 
-const variants = {
+const scrollVariants = {
   hidden: {
     opacity: 0,
   },
@@ -21,24 +22,51 @@ const variants = {
   },
 };
 
-const ProjectCard = ({ name, description, reverse, isWork = false }: IProjectCardProps) => {
+const imgVariants = {
+  rest: {
+    scale: 1,
+    transition: { duration: 0.4 },
+  },
+  hover: {
+    scale: 1.05,
+    transition: { duration: 0.5 },
+  },
+};
+
+const ProjectCard = ({ name, index, description, reverse, isWork = false }: IProjectCardProps) => {
   return (
-    <AnimateOnScrollIntoView variants={variants} animateOut>
-      <div className="py-12 w-ful">
+    <AnimateOnScrollIntoView variants={scrollVariants} animateOut>
+      <motion.div
+        initial="rest"
+        animate="rest"
+        whileHover="hover"
+        whileTap="hover"
+        className="my-20 md:my-12 md:mx-20"
+      >
         <Link href={`/${isWork ? "work" : "portfolio"}/${name}`}>
           <div
-            className={`flex flex-col p-6 
-          ${reverse ? "md:flex-row-reverse" : "md:flex-row"}
-          hover:cursor-pointer`}
+            className={`flex flex-col m-6 justify-between relative
+                      ${reverse ? "md:flex-row-reverse" : "md:flex-row"}
+                      hover:cursor-pointer
+                      `}
           >
-            <img src="https://placeimg.com/300/400/any"></img>
-            <div>
+            <div style={{ height: 300, width: 200, overflow: "hidden" }}>
+              <motion.img
+                variants={imgVariants}
+                className="h-full w-full"
+                src="https://placeimg.com/200/300/any"
+              />
+            </div>
+            <div className={`grow relative ${reverse ? "" : "md:pl-12"}`}>
+              <div className="projectCardIndex opacity-5 absolute -top-14 left-10 md:-top-10 md:left-40">
+                {index + 1}
+              </div>
               <h1 className="text-2xl font-bold pb-8">{name}</h1>
               <p>{description}</p>
             </div>
           </div>
         </Link>
-      </div>
+      </motion.div>
     </AnimateOnScrollIntoView>
   );
 };

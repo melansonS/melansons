@@ -37,3 +37,7 @@ body {
 .fillAvailable {
   height: -webkit-fill-available;
 }
+
+.projectCardIndex {
+  font-size: 14rem;
+}
