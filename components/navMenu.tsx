@@ -85,7 +85,7 @@ export default function NavMenu({ toggleShowMenu }: INavMenuProps) {
             );
           })}
           {projectLinks.map((projectLink) => {
-            const isCurrent = router.asPath === `/projects${projectLink.href}`;
+            const isCurrent = router.asPath === `/portfolio${projectLink.href}`;
             return (
               <motion.div
                 key={`motion-nav-project-${projectLink.name}`}
@@ -93,7 +93,7 @@ export default function NavMenu({ toggleShowMenu }: INavMenuProps) {
                 whileHover={menuItemHover}
                 className="pb-2 text-lg md:pb-4 md:text-xl"
               >
-                <Link href={`/projects${projectLink.href}`}>
+                <Link href={`/portfolio${projectLink.href}`}>
                   <span className="hover:underline hover:cursor-pointer">
                     {isCurrent ? "◦ " : ""}
                     {projectLink.name}

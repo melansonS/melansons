@@ -13,20 +13,12 @@ export const links: ILink[] = [
     href: "/about",
   },
   {
-    name: "work",
-    href: "/work",
-  },
-  {
-    name: "projects",
-    href: "/projects",
+    name: "portfolio",
+    href: "/portfolio",
   },
 ];
 
 export const projectLinks: ILink[] = [
-  {
-    name: "test",
-    href: "/test",
-  },
   {
     name: "typing",
     href: "/typing",

@@ -25,7 +25,7 @@ const ProjectCard = ({ name, description, reverse, isWork = false }: IProjectCar
   return (
     <AnimateOnScrollIntoView variants={variants} animateOut>
       <div className="py-12 w-ful">
-        <Link href={`/${isWork ? "work" : "projects"}/${name}`}>
+        <Link href={`/${isWork ? "work" : "portfolio"}/${name}`}>
           <div
             className={`flex flex-col p-6 
           ${reverse ? "md:flex-row-reverse" : "md:flex-row"}

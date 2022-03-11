@@ -8,7 +8,7 @@ const ProjectLinks = () => {
       {projectLinks.map((link) => {
         return (
           <div className="hover:underline w-fit">
-            <Link href={`/projects${link.href}`}>{link.name}</Link>
+            <Link href={`/portfolio${link.href}`}>{link.name}</Link>
           </div>
         );
       })}
