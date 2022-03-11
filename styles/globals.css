@@ -33,3 +33,7 @@ body {
 .activeHamburger::after {
   @apply top-0 rotate-90;
 }
+
+.fillAvailable {
+  height: -webkit-fill-available;
+}

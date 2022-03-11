@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { links, projectLinks, MENU_TRANSITION_DURATION } from "../utils/navConsts";
@@ -46,10 +46,14 @@ const menuItemHover = {
 export default function NavMenu({ toggleShowMenu }: INavMenuProps) {
   const router = useRouter();
 
-  const handleNavigate = (href: string) => {
-    toggleShowMenu(false);
-    router.push(href);
+  const escapeNavMenu = (e: KeyboardEvent) => {
+    if (e.key === "Escape") toggleShowMenu(false);
   };
+
+  useEffect(() => {
+    window.addEventListener("keyup", escapeNavMenu);
+    return () => window.removeEventListener("keyup", escapeNavMenu);
+  });
 
   return (
     <motion.div
@@ -58,7 +62,7 @@ export default function NavMenu({ toggleShowMenu }: INavMenuProps) {
       exit="exit"
       variants={menuVariants}
       transition={{ duration: MENU_TRANSITION_DURATION }}
-      className="fixed bg-stone-200 dark:bg-zinc-800 w-full h-full top-0 left-0 z-10 overflow-auto"
+      className="fixed bg-stone-200 dark:bg-zinc-800 w-full fillAvailable top-0 left-0 z-10 overflow-auto"
     >
       <div className="w-2/3 h-full mx-auto pt-16 pb-16 flex justify-between flex-col md:flex-row">
         <motion.div className="p-10 pt-2 w-full md:p-10" variants={menuItemsContainerVariants}>
@@ -69,16 +73,14 @@ export default function NavMenu({ toggleShowMenu }: INavMenuProps) {
                 key={`motion-nav-link-${link.name}`}
                 variants={menuItemVariants}
                 whileHover={menuItemHover}
+                className="py-3 text-3xl md:py-6 md:text-4xl"
               >
-                <button
-                  className="py-3 text-3xl md:py-6 md:text-4xl"
-                  onClick={() => {
-                    handleNavigate(link.href);
-                  }}
-                >
-                  {isCurrent ? "◦ " : ""}
-                  <span className="hover:underline">{link.name}</span>
-                </button>
+                <Link href={link.href}>
+                  <span className="hover:underline hover:cursor-pointer">
+                    {isCurrent ? "◦ " : ""}
+                    {link.name}
+                  </span>
+                </Link>
               </motion.div>
             );
           })}

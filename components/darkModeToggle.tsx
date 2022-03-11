@@ -31,8 +31,6 @@ const DarkmodeToggle = () => {
   const [isDarkmode, setIsDarkmode] = useState<boolean | null>(null);
   const breakpoint = useBreakPoints();
 
-  console.log(breakpoint);
-
   const handleToggleDarkMode = () => {
     setIsDarkmode(!isDarkmode);
     localStorage.theme = getThemeString(!isDarkmode);
