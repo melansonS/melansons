@@ -1,13 +1,12 @@
 import Link from "next/link";
 import AnimateOnScrollIntoView from "./animateOnScrollIntoView";
 import { motion } from "framer-motion";
-import useBreakPoints from "../utils/usebreakpoints";
 interface IProjectCardProps {
   name: string;
   description: string;
   reverse: boolean;
   isWork?: boolean;
-  index: number;
+  tags?: string[];
 }
 
 const scrollVariants = {
@@ -34,8 +33,22 @@ const imgVariants = {
   },
 };
 
-const ProjectCard = ({ name, index, description, reverse, isWork = false }: IProjectCardProps) => {
-  const breakpoint = useBreakPoints();
+const titleVariants = {
+  rest: {
+    textDecoration: "none",
+  },
+  hover: {
+    textDecoration: "underline",
+  },
+};
+
+const ProjectCard = ({
+  name,
+  description,
+  reverse,
+  tags = [],
+  isWork = false,
+}: IProjectCardProps) => {
   return (
     <AnimateOnScrollIntoView variants={scrollVariants}>
       <motion.div
@@ -64,14 +77,28 @@ const ProjectCard = ({ name, index, description, reverse, isWork = false }: IPro
                 src="https://picsum.photos/200/300"
               />
             </div>
-            <div className={`grow relative ${reverse ? "pr-6" : "md:pl-12"}`}>
-              <h1 className="text-2xl font-bold pt-2 pb-4 md:pb-6">{name}</h1>
-              <p className="w-fit">{description}</p>
-              {breakpoint !== "sm" && (
-                <div className="projectCardIndex h-fit opacity-5 absolute left-1/4 top-4">
-                  {index + 1}
-                </div>
-              )}
+            <div
+              className={`grow relative flex flex-col justify-between
+             ${reverse ? "pr-6" : "md:pl-12"}`}
+            >
+              <div>
+                <motion.h1
+                  variants={titleVariants}
+                  className="text-2xl font-bold pt-2 pb-4 md:pb-6"
+                >
+                  {name}
+                </motion.h1>
+                <p className="w-fit">{description}</p>
+              </div>
+              <div className="p-2 w-fit">
+                {tags.map((tag, index) => {
+                  return (
+                    <code className="font-bold " key={`tag-${tag}`}>
+                      {tag}&nbsp;{index < tags.length - 1 && "| "}
+                    </code>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </Link>

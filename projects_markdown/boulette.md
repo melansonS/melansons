@@ -3,8 +3,11 @@ title: "boulette"
 description: "Play Charade-like games over video chat!"
 images: images/22-09-2021.jpg
 orderIndex: 2
+githubUrl: "https://github.com/melansonS/boulette"
 tags:
-  - nextjs
+  - React
+  - Node
+  - Socket.io
 ---
 
 This project came together out of a desire to play _Boulette_ (a fun take on Charades) with friends and family during this past year's lockdown. It is designed to be used in conjunction with a video conferencing app of your choosing and allows all of the remote players to interact with a shared pool of prompts, to manage the teams and to keep track of the scores!

@@ -23,7 +23,7 @@ export default function Navbar() {
           <div className={`hamburger ${showMenu ? "activeHamburger" : ""}`}></div>
         </button>
       </div>
-      <h4 className="text-3xl md:text-5xl py-1 grow text-right">melansons</h4>
+      <h4 className="text-3xl md:text-5xl py-1 grow text-right">melanson[s]</h4>
       <DarkmodeToggle />
       <AnimatePresence exitBeforeEnter>
         {showMenu && <NavMenu toggleShowMenu={toggleShowMenu} />}

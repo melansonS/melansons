@@ -56,13 +56,13 @@ export default function NavMenu({ toggleShowMenu }: INavMenuProps) {
   });
 
   return (
-    <motion.div
+    <motion.nav
       initial="hidden"
       animate="enter"
       exit="exit"
       variants={menuVariants}
       transition={{ duration: MENU_TRANSITION_DURATION }}
-      className="fixed bg-stone-200 dark:bg-zinc-800 w-full fillAvailable top-0 left-0 z-10 overflow-auto"
+      className="flex fixed  mb-12 bg-stone-200 dark:bg-zinc-800 w-full fillAvailable top-0 left-0 z-10 overflow-auto min-h-screen md:h-full"
     >
       <div className="w-2/3 h-full mx-auto pt-16 pb-16 flex justify-between flex-col md:flex-row">
         <motion.div className="p-10 pt-2 w-full md:p-10" variants={menuItemsContainerVariants}>
@@ -116,6 +116,6 @@ export default function NavMenu({ toggleShowMenu }: INavMenuProps) {
           </motion.div>
         </div>
       </div>
-    </motion.div>
+    </motion.nav>
   );
 }

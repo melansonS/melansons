@@ -19,7 +19,7 @@ export default function LayoutFooter() {
           })}
         </span>
         <div className="px-6">
-          <span className="text-xl">melansons</span>
+          <p className="text-xl">melanson[s]</p>
           <Socials />
         </div>
       </div>

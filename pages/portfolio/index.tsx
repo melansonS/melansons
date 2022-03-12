@@ -50,8 +50,8 @@ const Projects = ({ projects }: { projects: IStaticProjectProps[] }) => {
             key={project.frontmatter.title}
             name={project.frontmatter.title}
             description={project.frontmatter.description}
+            tags={project.frontmatter.tags}
             reverse={index % 2 === 0}
-            index={index}
           />
         );
       })}
@@ -62,9 +62,11 @@ const Projects = ({ projects }: { projects: IStaticProjectProps[] }) => {
         <div className="text-center mt-4 mb-12 font-bold text-xl">
           <p>
             more on{" "}
-            <a href="https://github.com/melansonS" target="_blank" className="hover:underline">
-              Github
-            </a>
+            <code>
+              <a href="https://github.com/melansonS" target="_blank" className="hover:underline">
+                Github
+              </a>
+            </code>
           </p>
         </div>
       </AnimateOnScrollIntoView>

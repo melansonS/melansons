@@ -3,8 +3,13 @@ title: "calendar"
 description: "Daily habits"
 images: images/22-09-2021.jpg
 orderIndex: 0
+githubUrl: "https://github.com/melansons/habit-calendar"
 tags:
-  - nextjs
+  - React
+  - Node
+  - MongoDB
+  - Auth0
+  - Material UI
 ---
 
 Calendar calendars, cal daily calendars, cal daily calendars, cal daily calendars, cal daily calendars, cal daily calendars, cal daily calendars, cal daily calendars, cal daily calendars, cal daily calendars, cal daily

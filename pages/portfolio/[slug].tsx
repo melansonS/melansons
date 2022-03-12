@@ -16,6 +16,7 @@ interface PojectFrontMatter {
   tags: string[];
   images: string[];
   orderIndex: number;
+  githubUrl: string;
 }
 
 export interface IStaticProjectProps {
@@ -31,6 +32,18 @@ const Project = ({ frontmatter, content }: IStaticProjectProps) => {
         className="prose max-w-none dark:prose-invert"
         dangerouslySetInnerHTML={{ __html: md().render(content) }}
       />
+      <div className="text-center w-full py-6">
+        Source code on{" "}
+        <code>
+          <a
+            href={frontmatter.githubUrl}
+            target="_blank"
+            className="hover:underline hover:cursor-pointer"
+          >
+            Github
+          </a>
+        </code>
+      </div>
     </AnimatedPageContainer>
   );
 };
