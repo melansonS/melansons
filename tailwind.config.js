@@ -21,6 +21,8 @@ module.exports = {
             blockquote: { color: theme("colors.zinc.900") },
             figcaption: { color: theme("colors.zinc.900") },
             hr: {
+              opacity: 0.5,
+              marginBottom: "1em",
               borderColor: theme("colors.zinc.900"),
             },
           },
@@ -41,6 +43,8 @@ module.exports = {
             blockquote: { color: theme("colors.stone.300") },
             figcaption: { color: theme("colors.stone.300") },
             hr: {
+              opacity: 0.5,
+              marginBottom: "1em",
               borderColor: theme("colors.stone.300"),
             },
           },

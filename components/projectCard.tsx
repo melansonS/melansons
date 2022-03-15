@@ -7,6 +7,7 @@ interface IProjectCardProps {
   reverse: boolean;
   isWork?: boolean;
   tags?: string[];
+  image?: string;
 }
 
 const scrollVariants = {
@@ -25,10 +26,14 @@ const scrollVariants = {
 const imgVariants = {
   rest: {
     scale: 1,
+    // skewX: 0,
+    rotateZ: 0,
     transition: { duration: 0.4 },
   },
   hover: {
     scale: 1.1,
+    // skewX: -1.5,
+    rotateZ: 2,
     transition: { duration: 0.5 },
   },
 };
@@ -48,6 +53,7 @@ const ProjectCard = ({
   reverse,
   tags = [],
   isWork = false,
+  image,
 }: IProjectCardProps) => {
   return (
     <AnimateOnScrollIntoView variants={scrollVariants}>
@@ -69,12 +75,12 @@ const ProjectCard = ({
           >
             <div
               style={{ height: 300, width: 200, minWidth: 200 }}
-              className="overflow-hidden m-1 mx-auto"
+              className="overflow-hidden m-1 mx-auto flex flex-col justify-center"
             >
               <motion.img
                 variants={imgVariants}
-                className="h-full w-full"
-                src="https://picsum.photos/200/300"
+                // className="flex flex-col justify-center"
+                src={`${image ? image : "https://picsum.photos/200/300"}`}
               />
             </div>
             <div

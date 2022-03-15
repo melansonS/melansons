@@ -52,6 +52,7 @@ const Projects = ({ projects }: { projects: IStaticProjectProps[] }) => {
             description={project.frontmatter.description}
             tags={project.frontmatter.tags}
             reverse={index % 2 === 0}
+            image={project.frontmatter.image}
           />
         );
       })}

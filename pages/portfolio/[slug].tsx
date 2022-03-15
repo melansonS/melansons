@@ -14,7 +14,7 @@ interface PojectFrontMatter {
   title: string;
   description: string;
   tags: string[];
-  images: string[];
+  image?: string;
   orderIndex: number;
   githubUrl: string;
 }
