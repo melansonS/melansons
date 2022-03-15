@@ -56,9 +56,6 @@ const Projects = ({ projects }: { projects: IStaticProjectProps[] }) => {
           />
         );
       })}
-      <AnimateOnScrollIntoView variants={ellipsesScrollVariants} animateOut>
-        <p className="text-center mt-6 font-bold text-2xl">...</p>
-      </AnimateOnScrollIntoView>
       <AnimateOnScrollIntoView variants={moreScrollVariants} animateOut>
         <div className="text-center mt-4 mb-12 font-bold text-xl">
           <p>

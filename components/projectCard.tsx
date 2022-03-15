@@ -26,13 +26,11 @@ const scrollVariants = {
 const imgVariants = {
   rest: {
     scale: 1,
-    // skewX: 0,
     rotateZ: 0,
     transition: { duration: 0.4 },
   },
   hover: {
-    scale: 1.1,
-    // skewX: -1.5,
+    scale: 1.05,
     rotateZ: 2,
     transition: { duration: 0.5 },
   },
@@ -79,7 +77,6 @@ const ProjectCard = ({
             >
               <motion.img
                 variants={imgVariants}
-                // className="flex flex-col justify-center"
                 src={`${image ? image : "https://picsum.photos/200/300"}`}
               />
             </div>
@@ -96,7 +93,7 @@ const ProjectCard = ({
                 </motion.h1>
                 <p className="w-fit">{description}</p>
               </div>
-              <div className="p-2 w-fit">
+              <div className="py-2 w-fit">
                 {tags.map((tag, index) => {
                   return (
                     <code className="font-bold " key={`tag-${tag}`}>
@@ -109,6 +106,7 @@ const ProjectCard = ({
           </div>
         </Link>
       </motion.div>
+      <hr className="py-2 opacity-30 border-zinc-900 dark:border-stone-300"></hr>
     </AnimateOnScrollIntoView>
   );
 };

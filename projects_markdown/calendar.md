@@ -12,7 +12,14 @@ tags:
   - Material UI
 ---
 
-Calendar calendars, cal daily calendars, cal daily calendars, cal daily calendars, cal daily calendars, cal daily calendars, cal daily calendars, cal daily calendars, cal daily calendars, cal daily calendars, cal daily
+Themes
 
-C calendars, cal daily calendars, cal daily calendars, cal daily calendars, cal daily
+Habits
+
+Daily
+
+This project was built using HTML, CSS, React, NodeJs, MongoDB, Autho0 and the customizable Material UI Component Library
+
 **Try it here:** [_https://habit-calendar.vercel.app_](https://habit-calendar.vercel.app)
+
+![boulette_s](https://raw.githubusercontent.com/melansonS/habit-calendar/main/public/calendar_demo.png)
