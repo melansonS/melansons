@@ -20,8 +20,8 @@ export const links: ILink[] = [
 
 export const projectLinks: ILink[] = [
   {
-    name: "calendar",
-    href: "/calendar",
+    name: "habit-calendar",
+    href: "/habit-calendar",
   },
   {
     name: "typing",

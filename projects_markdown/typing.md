@@ -1,6 +1,6 @@
 ---
 title: "typing"
-description: "Typing test, how fast can you type?"
+description: "Practice your typing speed and acuracy while keeping track of your progress and aiming for the top of the leaderboard"
 image:
 orderIndex: 1
 githubUrl: "https://github.com/melansonS/typing-test"

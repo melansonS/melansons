@@ -1,6 +1,6 @@
 ---
 title: "grouped"
-description: "Organize your people"
+description: "Create, manage and update your groups and the people in those groups on your own, or collaboratively in real time"
 images: images/22-09-2021.jpg
 orderIndex: 3
 githubUrl: "https://github.com/melansonS/Grouped"

@@ -1,6 +1,6 @@
 ---
-title: "calendar"
-description: "Daily habits"
+title: "habit-calendar"
+description: "Check in daily to keep track of your habits using this color customizable calendar"
 image:
 orderIndex: 0
 githubUrl: "https://github.com/melansons/habit-calendar"
@@ -14,7 +14,7 @@ tags:
 
 A big focus of mine has recently been to work on building better habits and better systems. Implementing good routines and habits isn't something that just happens over night and I wanted to build something akin to my carved rubber stamps and paper calendar to help keep me on track.
 
-The intention behind the design of this project was to create something that is welcoming and easy to use. I opted to implement OAuth2 user authetification via Auth0's platform. This allows for easy log in - sign up as well as the option to log in with your Google credentials. I also wanted to be able customize the colors/ theme at will and was able to set that up using Material UI, it's theming features and it's customizeable palettes.
+The intention behind the design of this project was to create something that is welcoming and easy to use. I opted to implement OAuth2 user authetication via Auth0's platform. This allows for easy log in - sign up as well as the option to log in with your Google credentials. I also wanted to be able customize the colors/ theme at will and was able to set that up using Material UI, it's theming features and it's customizable palettes.
 
 This project was built using HTML, CSS, React, NodeJs, MongoDB, Autho0 and the customizable Material UI Component Library
 
@@ -39,9 +39,9 @@ _Mind the spin up time for the backend hosted on Heroku_
 
 ---
 
-There are sill a couple of things that I'm looking to update and implement on this project such as;
+There are sill a couple of things that I'm looking to update and implement on this project:
 
 - Features:
   - Multiple named calendars for when you're trying to build more than one habit
-  - Social elements such as viewing connections' calendars, streaks as well as a ping/reminder them to help keep them accountable
+  - Social elements such as viewing connections' calendars, streaks as well as a ping/reminder to help keep them accountable
 - Migrate the back end off of Heroku for seamless start up and usage

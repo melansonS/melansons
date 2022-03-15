@@ -1,6 +1,6 @@
 ---
 title: "boulette"
-description: "Play Charade-like games over video chat!"
+description: "Play Charades-like games over video chat and interact with a shared pool of folded up prompts"
 image: /crumpled-paper-white.png
 orderIndex: 2
 githubUrl: "https://github.com/melansonS/boulette"
