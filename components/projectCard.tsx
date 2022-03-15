@@ -30,8 +30,8 @@ const imgVariants = {
     transition: { duration: 0.4 },
   },
   hover: {
-    scale: 1.05,
-    rotateZ: 2,
+    scale: 1.025,
+    rotateZ: 1.5,
     transition: { duration: 0.5 },
   },
 };
