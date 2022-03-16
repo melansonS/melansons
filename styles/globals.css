@@ -41,3 +41,7 @@ body {
 .projectCardIndex {
   font-size: 14rem;
 }
+
+.prose li::marker {
+  @apply text-zinc-900 dark:text-stone-300;
+}
