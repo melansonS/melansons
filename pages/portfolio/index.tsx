@@ -57,7 +57,7 @@ const Projects = ({ projects }: { projects: IStaticProjectProps[] }) => {
         );
       })}
       <AnimateOnScrollIntoView variants={moreScrollVariants} animateOut>
-        <div className="text-center mt-4 mb-12 font-bold text-xl">
+        <div className="text-center mt-4 mb-12 ">
           <p>
             more on{" "}
             <code>
