@@ -72,12 +72,13 @@ const ProjectCard = ({
                       `}
           >
             <div
-              style={{ height: 300, width: 200, minWidth: 200 }}
+              style={{ height: 200, width: 200, minWidth: 200 }}
               className="overflow-hidden m-1 mx-auto flex flex-col justify-center"
             >
               <motion.img
                 variants={imgVariants}
                 src={`${image ? image : "https://picsum.photos/200/300"}`}
+                className="dark:opacity-80"
               />
             </div>
             <div
