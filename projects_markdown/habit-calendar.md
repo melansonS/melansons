@@ -1,7 +1,7 @@
 ---
 title: "habit-calendar"
 description: "Check in daily to keep track of your habits using this color customizable calendar"
-image:
+image: calendar-icon.png
 orderIndex: 0
 githubUrl: "https://github.com/melansons/habit-calendar"
 tags:
