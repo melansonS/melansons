@@ -5,7 +5,7 @@ export default function LayoutHead() {
     <Head>
       <title>melanson[s]</title>
       <meta name="description" content="Samuel Melanson - Web Portfolio" />
-      <link rel="icon" href="/sm_icon.png" />
+      <link rel="icon" href="/tab-icon.png" />
     </Head>
   );
 }

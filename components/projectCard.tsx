@@ -31,7 +31,7 @@ const imgVariants = {
   },
   hover: {
     scale: 1.01,
-    rotateZ: 1.25,
+    rotateZ: 1,
     transition: { duration: 0.5 },
   },
 };
