@@ -19,7 +19,11 @@ export default function Navbar() {
   return (
     <header className="flex justify-between  mx-4 px-8 top-0 pt-8 pb-8 sm:pt-12 sm:px-12">
       <div className={`flex  ${showMenu ? "fixed z-30" : ""}`}>
-        <button className="relative h-10 w-10 z-20" onClick={() => setShowMenu(!showMenu)}>
+        <button
+          aria-label="toggle navigation menu"
+          className="relative h-10 w-10 z-20"
+          onClick={() => setShowMenu(!showMenu)}
+        >
           <div className={`hamburger ${showMenu ? "activeHamburger" : ""}`}></div>
         </button>
       </div>

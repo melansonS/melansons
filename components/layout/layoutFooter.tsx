@@ -10,7 +10,7 @@ export default function LayoutFooter() {
           {links.map((link) => {
             return (
               <div
-                className="h-fit self-end w-full text-left sm:px-3 sm:text-center hover:underline"
+                className="h-fit self-end w-full text-left sm:px-3 sm:text-center hover:underline p-2"
                 key={`foot-nav-link-${link.name}`}
               >
                 <Link href={link.href}>{link.name}</Link>
@@ -19,7 +19,7 @@ export default function LayoutFooter() {
           })}
         </span>
         <div className="px-6">
-          <p className="text-xl">melanson[s]</p>
+          <p className="text-xl pl-2">melanson[s]</p>
           <Socials />
         </div>
       </div>

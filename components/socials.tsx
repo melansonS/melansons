@@ -4,7 +4,7 @@ export default function Socials() {
   return (
     <div>
       <ul>
-        <li>
+        <li className="p-2">
           <a
             href="https://www.linkedin.com/in/samuel-melanson/"
             target="_blank"
@@ -13,7 +13,7 @@ export default function Socials() {
             LinkedIn
           </a>
         </li>
-        <li>
+        <li className="p-2">
           <a href="https://github.com/melansonS" target="_blank" className="hover:underline">
             Github
           </a>
