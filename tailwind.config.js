@@ -25,6 +25,11 @@ module.exports = {
               marginBottom: "1em",
               borderColor: theme("colors.zinc.900"),
             },
+            img: {
+              width: "90%",
+              height: "auto",
+              margin: "0 auto",
+            },
           },
         },
         invert: {

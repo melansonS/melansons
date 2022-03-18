@@ -16,4 +16,4 @@ Built using HTML, CSS, React, NodeJs and MongoDB + Mongoose to store user result
 
 **Try it here:** [_https://typing-test-ten.vercel.app/_](https://typing-test-ten.vercel.app/)
 
-![demo gif](https://raw.githubusercontent.com/melansonS/typing-test/master/typing-test.gif?token=ALHOCD2PHEB3PKGU2VRNA5K7TRZ4K "demo")
+![demo gif](https://raw.githubusercontent.com/melansonS/typing-test/master/typing-test.gif "demo")

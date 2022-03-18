@@ -77,6 +77,7 @@ const ProjectCard = ({
             >
               <motion.img
                 variants={imgVariants}
+                style={{ height: 200, width: 200, minWidth: 200 }}
                 src={`${image ? image : "https://picsum.photos/200/300"}`}
                 className="dark:opacity-80"
                 alt={image?.replace(".png", "") || "default-icon"}
