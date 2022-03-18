@@ -79,6 +79,7 @@ const ProjectCard = ({
                 variants={imgVariants}
                 src={`${image ? image : "https://picsum.photos/200/300"}`}
                 className="dark:opacity-80"
+                alt={image?.replace(".png", "") || "default-icon"}
               />
             </div>
             <div

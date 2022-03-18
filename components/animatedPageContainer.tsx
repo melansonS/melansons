@@ -20,7 +20,7 @@ const AnimatedPageContainer = ({ children }: AnimatedPageContainerProps): JSX.El
       exit="exit"
       variants={variants}
       transition={{ type: { ease: "easeInOut" }, delay: MENU_TRANSITION_DURATION }}
-      className="flex flex-col items-start w-full px-20 py-10"
+      className="flex flex-col items-start w-full px-10 py-5 sm:px-20 sm:py-10"
     >
       {children}
     </motion.main>

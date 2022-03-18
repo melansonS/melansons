@@ -4,7 +4,7 @@ import Socials from "../socials";
 
 export default function LayoutFooter() {
   return (
-    <footer className="border-t-2 border-zinc-900 dark:border-stone-300 pt-6 pb-12 mx-4">
+    <footer className="border-t-2 border-zinc-900 dark:border-stone-300 pt-6 pb-10 mx-4">
       <div className="flex justify-between">
         <span className="flex px-6 flex-col sm:flex-row">
           {links.map((link) => {
@@ -19,7 +19,7 @@ export default function LayoutFooter() {
           })}
         </span>
         <div className="px-6">
-          <p className="text-xl pl-2">melanson[s]</p>
+          <p className="text-xl pl-2 pb-2">melanson[s]</p>
           <Socials />
         </div>
       </div>

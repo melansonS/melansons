@@ -1,7 +1,7 @@
 ---
 title: "boulette"
 description: "Play Charades-like games over video chat and interact with a shared pool of crumpled up prompts"
-image: /crumpled-paper-white.png
+image: /crumpled-paper-icon.png
 orderIndex: 2
 githubUrl: "https://github.com/melansonS/boulette"
 tags:
