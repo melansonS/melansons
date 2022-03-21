@@ -29,9 +29,9 @@ const Home: NextPage = () => {
           <PageTitle content="Hi, I'm Samuel Melanson" />
         </div>
         <p>
-          I am a full stack web developer. I spend my days working with HTML CSS, and Javascript
+          I am a full stack web developer. I spend my days working with HTML, CSS and Javascript
           (except it's really <code>Typescript</code>). Most of the things I build these days use
-          some flavour of React and Node as well a whichever database (<code>SQL</code> -{" "}
+          some flavour of React and Node as well as whichever database (<code>SQL</code> -{" "}
           <code>NoSQl</code>) fits the project
         </p>
         <div className="flex justify-center w-full pt-12 pb-8 z-0">

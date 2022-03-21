@@ -15,9 +15,9 @@ const About: NextPage = () => {
         <br></br>
         <p>
           If anything, working in tech has reminded me time and again that "The more you know, the
-          more you realize you don't know." Undestanding this has helped me grow the confidence to
-          choose to focus on the things that I am actually interested in as opposed to carrying the
-          weight of feeling like I <i>have</i> to know <i>everything</i>.
+          more you realize you don't know." Understanding this has helped me grow the confidence to
+          focus on the things that I am interested in instead of carrying the weight of feeling like
+          I <i>have</i> to know <i>everything</i>.
         </p>
         <br></br>
         <p>
