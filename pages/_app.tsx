@@ -6,17 +6,18 @@ import LayoutFooter from "../components/layout/layoutFooter";
 import LayoutHead from "../components/layout/layoutHead";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
+  const bareBonesPages = ["/adn-portfolio"];
   const url = `http://localhost:3000${router.route}`;
 
   return (
     <div>
       <LayoutHead />
       <div className="flex flex-col justify-between mx-auto h-full min-h-screen max-w-screen-lg">
-        <Navbar />
+        <Navbar bareBones={bareBonesPages.includes(router.route)} />
         <AnimatePresence exitBeforeEnter>
           <Component {...pageProps} key={url} />
         </AnimatePresence>
-        <LayoutFooter />
+        <LayoutFooter bareBones={bareBonesPages.includes(router.route)} />
       </div>
     </div>
   );

@@ -4,7 +4,11 @@ import NavMenu from "./navMenu";
 import { useRouter } from "next/router";
 import DarkmodeToggle from "./darkModeToggle";
 
-export default function Navbar() {
+interface INavbarProps {
+  bareBones: boolean;
+}
+
+export default function Navbar({ bareBones }: INavbarProps) {
   const [showMenu, setShowMenu] = useState(false);
   const router = useRouter();
 
@@ -19,13 +23,15 @@ export default function Navbar() {
   return (
     <header className="flex justify-between  mx-4 px-8 top-0 pt-8 pb-8 sm:pt-12 sm:px-12">
       <div className={`flex  ${showMenu ? "fixed z-30" : ""}`}>
-        <button
-          aria-label="toggle navigation menu"
-          className="relative h-10 w-10 z-20"
-          onClick={() => setShowMenu(!showMenu)}
-        >
-          <div className={`hamburger ${showMenu ? "activeHamburger" : ""}`}></div>
-        </button>
+        {!bareBones && (
+          <button
+            aria-label="toggle navigation menu"
+            className="relative h-10 w-10 z-20"
+            onClick={() => setShowMenu(!showMenu)}
+          >
+            <div className={`hamburger ${showMenu ? "activeHamburger" : ""}`}></div>
+          </button>
+        )}
       </div>
       <h4 className="text-3xl md:text-5xl py-1 grow text-right">melanson[s]</h4>
       <DarkmodeToggle />
