@@ -31,23 +31,40 @@ const AdnPortfolio = () => {
       </div>
 
       <div className="flex flex-wrap">
-        <ModalButton src="https://placekitten.com/500/500">
-          <img src="https://placekitten.com/500/500" className="halfSizeImage" />
+        <ModalButton src="/full render v1.png">
+          <img src="/full render v1.png" className="halfSizeImage" />
         </ModalButton>
-        <ModalButton src="https://placekitten.com/500/500">
-          <img src="https://placekitten.com/500/500" className="halfSizeImage" />
+        <ModalButton src="/full render v3_clay.png">
+          <img src="/full render v3_clay.png" className="quarterSizeImage" />
         </ModalButton>
       </div>
 
-      <ModalButton src="https://placekitten.com/1000/1000">
-        <img src="https://placekitten.com/1000/1000" className="halfSizeImage" />
-      </ModalButton>
-      <ModalButton src="https://placekitten.com/1600/900">
-        <img src="https://placekitten.com/1600/900" className="quarterSizeImage" />
-      </ModalButton>
-      <ModalButton src="https://placekitten.com/900/1600">
-        <img src="https://placekitten.com/900/1600" className="eighthSizeImage" />
-      </ModalButton>
+      <div className="flex flex-wrap">
+        <ModalButton src="/lamp v2.png">
+          <img src="/lamp v2.png" className="quarterSizeImage" />
+        </ModalButton>
+        <ModalButton src="/lamp v2_clay.png">
+          <img src="/lamp v2_clay.png" className="quarterSizeImage" />
+        </ModalButton>
+      </div>
+
+      <div className="flex flex-wrap">
+        <ModalButton src="/radio v1.png">
+          <img src="/radio v1.png" className="quarterSizeImage" />
+        </ModalButton>
+        <ModalButton src="/radio v1_clay.png">
+          <img src="/radio v1_clay.png" className="quarterSizeImage" />
+        </ModalButton>
+      </div>
+
+      <div className="flex flex-wrap">
+        <ModalButton src="/books v1.png">
+          <img src="/books v1.png" className="quarterSizeImage" />
+        </ModalButton>
+        <ModalButton src="/books v1_clay.png">
+          <img src="/books v1_clay.png" className="quarterSizeImage" />
+        </ModalButton>
+      </div>
     </AnimatedPageContainer>
   );
 };
