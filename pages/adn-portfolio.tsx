@@ -28,33 +28,24 @@ const ModalContent = ({ closeModal, title, src }: IModalContentProps) => {
   };
   return (
     <div
-      className="modal fade fixed top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto bg-zinc-800 bg-opacity-90"
+      className="modal fade fixed top-0 left-0 w-full h-full flex justify-center items-center outline-none overflow-x-hidden overflow-y-auto bg-zinc-800 bg-opacity-90"
       id="modal"
       aria-labelledby="exampleModalCenterTitle"
       aria-modal="true"
       role="dialog"
       onClick={(e) => handleClick(e)}
     >
-      <div className="modal-dialog modal-dialog-centered relative w-auto pointer-events-none">
-        <div className="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto">
-          <div className="modal-header flex flex-shrink-0 items-center justify-between p-4 ">
-            <h5 className="text-xl font-medium leading-normal text-stone-300">
-              Modal title - {title}
-            </h5>
-            <button
-              type="button"
-              className="btn-close box-content w-4 h-4 p-1 stroke-stone-300 opacity-90 focus:shadow-none focus:outline-none focus:opacity-100  hover:opacity-100"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-              onClick={closeModal}
-            >
-              <CloseIcon height={24} width={24} />
-            </button>
-          </div>
-          <div className="modal-body relative p-4 flex justify-center">
-            <img src={src} className="" />
-          </div>
-        </div>
+      <button
+        type="button"
+        className="btn-close box-content w-4 h-4 p-4 stroke-stone-300 opacity-90 focus:opacity-100  hover:opacity-100 absolute top-0 right-0"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+        onClick={closeModal}
+      >
+        <CloseIcon height={24} width={24} />
+      </button>
+      <div className="h-fit">
+        <img src={src} className="max-h-screen max-w-screen  p-4" />
       </div>
     </div>
   );
@@ -74,7 +65,7 @@ const ModalButton = ({ children, title, src }: IModalButtonProps) => {
       <div className="">
         <button
           type="button"
-          className="inline-block leading-tight uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg active:shadow-lg transition duration-150 ease-in-out"
+          className="inline-block rounded"
           onClick={() => setShowModal(!showModal)}
         >
           {children}
@@ -112,17 +103,22 @@ const AdnPortfolio = () => {
       </div>
       <ModalButton title="first" src="https://placekitten.com/500/500">
         <div>
-          <img src="https://placekitten.com/500/500" />
+          <img src="https://placekitten.com/500/500" className="halfSizeImage" />
         </div>
       </ModalButton>
-      <ModalButton title="second" src="https://placekitten.com/400/200">
+      <ModalButton title="second" src="https://placekitten.com/1000/1000">
         <div>
-          <img src="https://placekitten.com/400/200" />
+          <img src="https://placekitten.com/1000/1000" className="halfSizeImage" />
         </div>
       </ModalButton>
       <ModalButton title="third" src="https://placekitten.com/1600/900">
         <div>
-          <img src="https://placekitten.com/1600/900" />
+          <img src="https://placekitten.com/1600/900" className="quarterSizeImage" />
+        </div>
+      </ModalButton>
+      <ModalButton title="third" src="https://placekitten.com/900/1600">
+        <div>
+          <img src="https://placekitten.com/900/1600" className="eighthSizeImage" />
         </div>
       </ModalButton>
     </AnimatedPageContainer>

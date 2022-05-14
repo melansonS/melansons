@@ -13,8 +13,8 @@ const CloseIcon = ({ height, width }: ICloseProps) => {
       fill="currentColor"
       viewBox="0 0 16 16"
     >
-      <line x1="1" y1="11" x2="11" y2="1" stroke-width="2" />
-      <line x1="1" y1="1" x2="11" y2="11" stroke-width="2" />
+      <line x1="1" y1="11" x2="11" y2="1" strokeWidth="2" />
+      <line x1="1" y1="1" x2="11" y2="11" strokeWidth="2" />
     </svg>
   );
 };

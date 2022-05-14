@@ -23,6 +23,18 @@ body {
   @apply w-8 h-0.5 bg-zinc-900 dark:bg-stone-300 absolute left-0 -top-1.5 md:w-10 md:-top-2;
 }
 
+.halfSizeImage {
+  zoom: 50%;
+}
+
+.quarterSizeImage {
+  zoom: 25%;
+}
+
+.eighthSizeImage {
+  zoom: 12.5%;
+}
+
 .activeHamburger {
   transform: rotate(45deg);
 }
