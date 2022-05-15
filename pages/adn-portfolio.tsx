@@ -13,7 +13,7 @@ const AdnPortfolio = () => {
       </div>
 
       <div className="my-6">
-        <h1 className="text-2xl font-bold pt-2 pb-4 md:pb-6">Firewatch</h1>
+        <h1 className="text-2xl font-bold pt-2 pb-4 md:pb-6">Piquet d'incendie - Firewatch</h1>
 
         <div className="flex flex-wrap">
           <ModalButton src="/full render v1.png">
@@ -53,7 +53,7 @@ const AdnPortfolio = () => {
       </div>
 
       <div className="my-6">
-        <h1 className="text-2xl font-bold pt-2 pb-4 md:pb-6">Toy Fishy</h1>
+        <h1 className="text-2xl font-bold pt-2 pb-4 md:pb-6">Gédéon - Gideon</h1>
 
         <div className="flex flex-wrap">
           <video controls muted playsInline loop autoPlay className="halfSizeImage md:ml-1.5 mb-8">
