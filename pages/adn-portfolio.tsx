@@ -56,7 +56,7 @@ const AdnPortfolio = () => {
         <h1 className="text-2xl font-bold pt-2 pb-4 md:pb-6">Toy Fishy</h1>
 
         <div className="flex flex-wrap">
-          <video controls className="halfSizeImage mb-8">
+          <video controls className="halfSizeImage md:ml-1.5 mb-8">
             <source src="Toy Fishy Video.mp4" type="video/webm"></source>
           </video>
         </div>
