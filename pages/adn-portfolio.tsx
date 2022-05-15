@@ -11,6 +11,7 @@ const AdnPortfolio = () => {
         <PageTitle content="Campus ADN" />
         <p className="font-bold">Portfolio conçu pour le programme de Modélisation 3D</p>
       </div>
+
       <div className="my-6">
         <h1 className="text-2xl font-bold pt-2 pb-4 md:pb-6">Firewatch</h1>
 
@@ -47,6 +48,25 @@ const AdnPortfolio = () => {
           </ModalButton>
           <ModalButton src="/books v1_clay.png">
             <img src="/books v1_clay.png" className="quarterSizeImage" />
+          </ModalButton>
+        </div>
+      </div>
+
+      <div className="my-6">
+        <h1 className="text-2xl font-bold pt-2 pb-4 md:pb-6">Toy Fishy</h1>
+
+        <div className="flex flex-wrap">
+          <video controls className="halfSizeImage mb-8">
+            <source src="Toy Fishy Video.mp4" type="video/webm"></source>
+          </video>
+        </div>
+
+        <div className="flex flex-wrap">
+          <ModalButton src="/Toy Fishy v2.png">
+            <img src="/Toy Fishy v2.png" className="quarterSizeImage" />
+          </ModalButton>
+          <ModalButton src="/Toy Fishy v3_clay.png">
+            <img src="/Toy Fishy v3_clay.png" className="quarterSizeImage" />
           </ModalButton>
         </div>
       </div>
