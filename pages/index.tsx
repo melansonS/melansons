@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         </div>
         <p>
           I am a full stack web developer. I spend my days working with HTML, CSS and Javascript
-          (except it's really <code>Typescript</code>). Most of the things I build these days use
+          (preferably <code>Typescript</code>). Most of the things I build these days use
           some flavour of React and Node as well as whichever database (<code>SQL</code> -{" "}
           <code>NoSQl</code>) fits the project
         </p>
