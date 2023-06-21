@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       <LayoutHead />
       <div className="flex flex-col justify-between mx-auto h-full min-h-screen max-w-screen-lg">
         <Navbar bareBones={bareBonesPages.includes(router.route)} />
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence mode="wait">
           <Component {...pageProps} key={url} />
         </AnimatePresence>
         <LayoutFooter bareBones={bareBonesPages.includes(router.route)} />

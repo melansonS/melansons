@@ -35,7 +35,7 @@ export default function Navbar({ bareBones }: INavbarProps) {
       </div>
       <h4 className="text-3xl md:text-5xl py-1 grow text-right">melanson[s]</h4>
       <DarkmodeToggle />
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait">
         {showMenu && <NavMenu toggleShowMenu={toggleShowMenu} />}
       </AnimatePresence>
     </header>

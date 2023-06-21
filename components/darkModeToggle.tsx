@@ -55,7 +55,7 @@ const DarkmodeToggle = () => {
   }, []);
 
   return (
-    <AnimatePresence initial={false} exitBeforeEnter>
+    <AnimatePresence initial={false} mode="wait">
       <motion.button
         aria-label="toggle light/dark mode"
         initial="hidden"
