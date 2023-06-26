@@ -99,7 +99,7 @@ const ProjectCard = ({
               <div className="py-2 w-fit">
                 {tags.map((tag, index) => {
                   return (
-                    <code className="font-bold " key={`tag-${tag}`}>
+                    <code className="font-bold " key={`tag-${tag}`} data-testid="tag">
                       {tag}&nbsp;{index < tags.length - 1 && "| "}
                     </code>
                   );

@@ -64,7 +64,10 @@ export default function NavMenu({ toggleShowMenu }: INavMenuProps) {
       transition={{ duration: MENU_TRANSITION_DURATION }}
       className="flex fixed  mb-12 bg-stone-200 dark:bg-zinc-800 w-full fillAvailable top-0 left-0 z-10 overflow-auto min-h-screen md:h-full"
     >
-      <div className="w-2/3 h-full mx-auto pt-16 pb-16 flex justify-between flex-col md:flex-row">
+      <div
+        className="w-2/3 h-full mx-auto pt-16 pb-16 flex justify-between flex-col md:flex-row"
+        data-testid="nav-menu"
+      >
         <motion.div className="p-10 pt-2 w-full md:p-10" variants={menuItemsContainerVariants}>
           {links.map((link) => {
             const isCurrent = router.route === link.href;

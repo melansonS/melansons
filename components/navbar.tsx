@@ -28,6 +28,7 @@ export default function Navbar({ bareBones }: INavbarProps) {
             aria-label="toggle navigation menu"
             className="relative h-10 w-10 z-20"
             onClick={() => setShowMenu(!showMenu)}
+            data-testid="navmenu-toggle-button"
           >
             <div className={`hamburger ${showMenu ? "activeHamburger" : ""}`}></div>
           </button>
