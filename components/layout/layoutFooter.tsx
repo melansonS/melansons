@@ -24,7 +24,7 @@ export default function LayoutFooter({ bareBones }: IFooterProps) {
             })}
         </span>
         <div className="px-6">
-          <p className="text-xl pl-2 pb-2">melanson[s]</p>
+          <h4 className="text-xl pl-2 pb-2">melanson[s]</h4>
           <Socials />
         </div>
       </div>
