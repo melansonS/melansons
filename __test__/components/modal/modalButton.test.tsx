@@ -32,4 +32,26 @@ describe("Modal Button", () => {
       expect(screen.getByRole("img")).toHaveAttribute("src", src);
     });
   });
+
+  it("closes modal content when closeModal is called", async () => {
+    const src = "/full render v1.png";
+    render(
+      <ModalButton src={src}>
+        <h1>Modal Button</h1>
+      </ModalButton>
+    );
+
+    const button = screen.getByRole("button");
+    fireEvent.click(button);
+    await waitFor(() => {
+      expect(screen.getByRole("img")).toHaveAttribute("src", src);
+    });
+
+    const modal = screen.getByRole("dialog");
+    fireEvent.click(modal);
+    await waitFor(() => {
+      expect(screen.queryByRole("img")).not.toBeInTheDocument();
+      expect(modal).not.toBeInTheDocument();
+    });
+  });
 });
