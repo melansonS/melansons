@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
+import React, { ReactNode, useEffect } from "react";
 import CloseIcon from "../icons/closeIcon";
 
 interface IModalContentProps {
-  src: string;
   closeModal: () => void;
+  children: ReactNode;
 }
 
-const ModalContent = ({ closeModal, src }: IModalContentProps) => {
+const ModalContent = ({ closeModal, children }: IModalContentProps) => {
   const escapeNavMenu = (e: KeyboardEvent) => {
     if (e.key === "Escape") closeModal();
   };
@@ -40,9 +40,7 @@ const ModalContent = ({ closeModal, src }: IModalContentProps) => {
       >
         <CloseIcon height={24} width={24} />
       </button>
-      <div className="h-fit">
-        <img src={src} className="max-h-screen max-w-screen p-4" />
-      </div>
+      <div className="h-fit">{children}</div>
     </div>
   );
 };
