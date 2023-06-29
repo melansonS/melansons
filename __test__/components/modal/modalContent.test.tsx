@@ -1,4 +1,4 @@
-import { screen, fireEvent, render, waitFor } from "@testing-library/react";
+import { screen, fireEvent, render } from "@testing-library/react";
 import ModalContent from "@components/modal/modalContent";
 import "@testing-library/jest-dom";
 
