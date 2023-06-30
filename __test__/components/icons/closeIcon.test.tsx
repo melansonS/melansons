@@ -11,7 +11,7 @@ describe("Close Icon", () => {
     const element = screen.getByTitle(/close icon/i);
     expect(element).toBeInTheDocument();
 
-    const svg = screen.getByTestId(/closeIcon/i);
+    const svg = screen.getByTestId(/close-icon/i);
     expect(svg).toHaveAttribute("height", height.toString());
     expect(svg).toHaveAttribute("width", width.toString());
   });

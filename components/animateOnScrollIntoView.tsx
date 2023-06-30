@@ -15,7 +15,6 @@ const AnimateOnScrollIntoView = ({
 }: IAnimateOnScrollIntoViewProps) => {
   const { ref, inView } = useInView();
   const controls = useAnimation();
-
   useEffect(() => {
     if (inView) {
       controls.start("show");
@@ -32,6 +31,7 @@ const AnimateOnScrollIntoView = ({
       animate={controls}
       variants={variants}
       className="w-full h-full"
+      data-testid="animate-on-scroll-into-view"
     >
       {children}
     </motion.div>

@@ -6,13 +6,13 @@ describe("Animated Page Container", () => {
   it("renders the animated page container", () => {
     render(
       <AnimatedPageContainer>
-        <div data-testid="test child">MOCK</div>
+        <div data-testid="test-child">MOCK</div>
       </AnimatedPageContainer>
     );
     const mainElement = screen.getByRole("main");
     expect(mainElement).toBeInTheDocument();
 
-    const childElement = screen.getByTestId("test child");
+    const childElement = screen.getByTestId("test-child");
     expect(childElement).toBeInTheDocument();
     expect(childElement).toHaveTextContent(/mock/i);
   });

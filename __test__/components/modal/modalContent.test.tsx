@@ -12,18 +12,18 @@ describe("Modal Content", () => {
   it("renders the Modal Content", () => {
     render(
       <ModalContent closeModal={closeModalMock}>
-        <div data-testid="modal div content">MOCK</div>
+        <div data-testid="modal-div-content">MOCK</div>
       </ModalContent>
     );
 
-    const element = screen.getByTestId("modal div content");
+    const element = screen.getByTestId("modal-div-content");
     expect(element).toBeInTheDocument();
   });
 
   it("calls closeModal when clicked", () => {
     render(
       <ModalContent closeModal={closeModalMock}>
-        <div data-testid="modal div content">MOCK</div>
+        <div data-testid="modal-div-content">MOCK</div>
       </ModalContent>
     );
 
@@ -35,7 +35,7 @@ describe("Modal Content", () => {
   it("calls closeModal on `ESC` keyUp", () => {
     render(
       <ModalContent closeModal={closeModalMock}>
-        <div data-testid="modal div content">MOCK</div>
+        <div data-testid="modal-div-content">MOCK</div>
       </ModalContent>
     );
 
