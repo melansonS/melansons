@@ -32,11 +32,9 @@ describe("Animated Page Container", () => {
     });
     window.IntersectionObserver = jest.fn().mockImplementation(intersectionObserverMock);
   });
-  // console.log(jest.requireActual("react-intersection-observer"));
 
   it("renders the animate on Scroll into  View wrapper and it's children", () => {
     (useInView as jest.Mock).mockImplementation(() => ({ ref: undefined, inView: false }));
-    // mockReturnValue(() => ({ ref: undefined, inView: false }));
     render(
       <AnimateOnScrollIntoView variants={scrollVariants}>
         <div data-testid="test-child">MOCK</div>

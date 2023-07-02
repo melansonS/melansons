@@ -79,7 +79,10 @@ export default function NavMenu({ toggleShowMenu }: INavMenuProps) {
                 className="py-3 text-3xl md:py-6 md:text-4xl"
               >
                 <Link href={link.href}>
-                  <span className="hover:underline hover:cursor-pointer">
+                  <span
+                    data-testid={isCurrent ? "current-element" : ""}
+                    className="hover:underline hover:cursor-pointer"
+                  >
                     {isCurrent ? "◦ " : ""}
                     {link.name}
                   </span>
@@ -97,7 +100,10 @@ export default function NavMenu({ toggleShowMenu }: INavMenuProps) {
                 className="pb-2 text-lg md:pb-4 md:text-xl"
               >
                 <Link href={`/portfolio${projectLink.href}`}>
-                  <span className="hover:underline hover:cursor-pointer">
+                  <span
+                    data-testid={isCurrent ? "current-element" : ""}
+                    className="hover:underline hover:cursor-pointer"
+                  >
                     {isCurrent ? "◦ " : ""}
                     {projectLink.name}
                   </span>
