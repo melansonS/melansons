@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import MoonIcon from "./icons/moonIcon";
 import SunIcon from "./icons/sunIcon";
-import useBreakPoints from "../utils/usebreakpoints";
+import { useBreakPoints } from "../utils/usebreakpoints";
 
-const getThemeString = (isDakr: boolean): string => (isDakr ? "dark" : "light");
+const getThemeString = (isDark: boolean): string => (isDark ? "dark" : "light");
 
 const variants = {
   hidden: {
