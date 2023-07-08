@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import Navbar from "@components/navbar";
 import "@testing-library/jest-dom";
 
@@ -50,11 +50,25 @@ describe("Navbar", () => {
   });
 
   it("renders nav menu when toggled", () => {
-    render(<Navbar bareBones={false} />);
+    render(<Navbar />);
     const button = screen.getByTestId("navmenu-toggle-button");
     fireEvent.click(button);
 
     const navMenu = screen.getByTestId("nav-menu");
     expect(navMenu).toBeInTheDocument();
+    const hamburgerElement = screen.getByTestId("menu-hamburger");
+    expect(hamburgerElement.classList.contains("activeHamburger")).toBe(true);
+  });
+
+  it("toggles the menu when `toggleShowMenu` is called from <NavMenu/>", async () => {
+    render(<Navbar />);
+    const button = screen.getByTestId("navmenu-toggle-button");
+    fireEvent.click(button);
+
+    const navMenu = screen.getByTestId("nav-menu");
+    fireEvent.keyUp(navMenu, { key: "Escape" });
+    await waitFor(() => {
+      expect(screen.queryByTestId("nav-menu")).not.toBeInTheDocument();
+    });
   });
 });

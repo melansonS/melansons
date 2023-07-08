@@ -4,9 +4,9 @@ import { AnimatePresence } from "framer-motion";
 import Navbar from "../components/navbar";
 import LayoutFooter from "../components/layout/layoutFooter";
 import LayoutHead from "../components/layout/layoutHead";
+import { bareBonesPages } from "@utils/navConsts";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
-  const bareBonesPages = ["/adn-portfolio"];
   const url = `http://localhost:3000${router.route}`;
 
   return (

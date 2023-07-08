@@ -5,10 +5,10 @@ import { useRouter } from "next/router";
 import DarkmodeToggle from "./darkModeToggle";
 
 interface INavbarProps {
-  bareBones: boolean;
+  bareBones?: boolean;
 }
 
-export default function Navbar({ bareBones }: INavbarProps) {
+export default function Navbar({ bareBones = false }: INavbarProps) {
   const [showMenu, setShowMenu] = useState(false);
   const router = useRouter();
 
@@ -30,7 +30,10 @@ export default function Navbar({ bareBones }: INavbarProps) {
             onClick={() => setShowMenu(!showMenu)}
             data-testid="navmenu-toggle-button"
           >
-            <div className={`hamburger ${showMenu ? "activeHamburger" : ""}`}></div>
+            <div
+              className={`hamburger ${showMenu ? "activeHamburger" : ""}`}
+              data-testid="menu-hamburger"
+            ></div>
           </button>
         )}
       </div>

@@ -37,5 +37,6 @@ export const projectLinks: ILink[] = [
   },
 ];
 
+export const bareBonesPages = ["/adn-portfolio"];
 export const MENU_TRANSITION_DURATION = 0.3;
 export const PLACEHOLDER_IMG_SRC = "https://picsum.photos/200/300";
