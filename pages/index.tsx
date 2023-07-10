@@ -28,10 +28,10 @@ const Home: NextPage = () => {
         <div className="w-full flex justify-center text-3xl pt-4">
           <PageTitle content="Hi, I'm Samuel Melanson" />
         </div>
-        <p>
+        <p data-testid="content-paragraph">
           I am a full stack web developer. I spend my days working with HTML, CSS and Javascript
-          (preferably <code>Typescript</code>). Most of the things I build these days use
-          some flavour of React and Node as well as whichever database (<code>SQL</code> -{" "}
+          (preferably <code>Typescript</code>). Most of the things I build these days use some
+          flavour of React and Node as well as whichever database (<code>SQL</code> -{" "}
           <code>NoSQl</code>) fits the project
         </p>
         <div className="flex justify-center w-full pt-12 pb-8 z-0">
@@ -45,6 +45,7 @@ const Home: NextPage = () => {
           >
             <img
               src="/pyramids.gif"
+              data-testid="pyramids-gif"
               alt="rotating prism"
               style={{ width: "190px", height: "190px" }}
               className="pointer-events-none"
