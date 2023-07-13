@@ -3,6 +3,7 @@ import Navbar from "@components/navbar";
 import "@testing-library/jest-dom";
 
 import { useRouter } from "next/router";
+import { bareBonesPages } from "@utils/navConsts";
 
 jest.mock("next/router", () => ({
   useRouter: jest.fn(),
@@ -44,7 +45,8 @@ describe("Navbar", () => {
   });
 
   it("to not render nav menu toggle when passed barebones prop", () => {
-    render(<Navbar bareBones={true} />);
+    const barebonesPage = "/adn-portfolio";
+    render(<Navbar bareBones={bareBonesPages.includes(barebonesPage)} />);
     const button = screen.queryByTestId("navmenu-toggle-button");
     expect(button).not.toBeInTheDocument();
   });
