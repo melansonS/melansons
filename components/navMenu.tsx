@@ -64,7 +64,10 @@ export default function NavMenu({ toggleShowMenu }: INavMenuProps) {
       transition={{ duration: MENU_TRANSITION_DURATION }}
       className="flex fixed  mb-12 bg-stone-200 dark:bg-zinc-800 w-full fillAvailable top-0 left-0 z-10 overflow-auto min-h-screen md:h-full"
     >
-      <div className="w-2/3 h-full mx-auto pt-16 pb-16 flex justify-between flex-col md:flex-row">
+      <div
+        className="w-2/3 h-full mx-auto pt-16 pb-16 flex justify-between flex-col md:flex-row"
+        data-testid="nav-menu"
+      >
         <motion.div className="p-10 pt-2 w-full md:p-10" variants={menuItemsContainerVariants}>
           {links.map((link) => {
             const isCurrent = router.route === link.href;
@@ -76,7 +79,10 @@ export default function NavMenu({ toggleShowMenu }: INavMenuProps) {
                 className="py-3 text-3xl md:py-6 md:text-4xl"
               >
                 <Link href={link.href}>
-                  <span className="hover:underline hover:cursor-pointer">
+                  <span
+                    data-testid={isCurrent ? "current-element" : ""}
+                    className="hover:underline hover:cursor-pointer"
+                  >
                     {isCurrent ? "◦ " : ""}
                     {link.name}
                   </span>
@@ -94,7 +100,10 @@ export default function NavMenu({ toggleShowMenu }: INavMenuProps) {
                 className="pb-2 text-lg md:pb-4 md:text-xl"
               >
                 <Link href={`/portfolio${projectLink.href}`}>
-                  <span className="hover:underline hover:cursor-pointer">
+                  <span
+                    data-testid={isCurrent ? "current-element" : ""}
+                    className="hover:underline hover:cursor-pointer"
+                  >
                     {isCurrent ? "◦ " : ""}
                     {projectLink.name}
                   </span>

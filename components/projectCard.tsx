@@ -1,13 +1,14 @@
 import Link from "next/link";
 import AnimateOnScrollIntoView from "./animateOnScrollIntoView";
 import { motion } from "framer-motion";
+import { PLACEHOLDER_IMG_SRC } from "@utils/navConsts";
 interface IProjectCardProps {
   name: string;
   description: string;
   reverse: boolean;
   isWork?: boolean;
   tags?: string[];
-  image?: string;
+  imageSrc?: string;
 }
 
 const scrollVariants = {
@@ -51,7 +52,7 @@ const ProjectCard = ({
   reverse,
   tags = [],
   isWork = false,
-  image,
+  imageSrc,
 }: IProjectCardProps) => {
   return (
     <AnimateOnScrollIntoView variants={scrollVariants}>
@@ -66,6 +67,7 @@ const ProjectCard = ({
       >
         <Link href={`/${isWork ? "work" : "portfolio"}/${name}`}>
           <div
+            data-testid="reversable-content"
             className={`flex flex-col my-6 justify-between relative content-center
                       ${reverse ? "md:flex-row-reverse" : "md:flex-row"}
                       hover:cursor-pointer
@@ -78,12 +80,13 @@ const ProjectCard = ({
               <motion.img
                 variants={imgVariants}
                 style={{ height: 200, width: 200, minWidth: 200 }}
-                src={`${image ? image : "https://picsum.photos/200/300"}`}
+                src={`${imageSrc ? imageSrc : PLACEHOLDER_IMG_SRC}`}
                 className="dark:opacity-80"
-                alt={image?.replace(".png", "") || "default-icon"}
+                alt={imageSrc?.replace(".png", "") || "default-icon"}
               />
             </div>
             <div
+              data-testid="reversable-content"
               className={`grow relative flex flex-col justify-between
              ${reverse ? "pr-6" : "md:pl-12"}`}
             >
@@ -99,7 +102,7 @@ const ProjectCard = ({
               <div className="py-2 w-fit">
                 {tags.map((tag, index) => {
                   return (
-                    <code className="font-bold " key={`tag-${tag}`}>
+                    <code className="font-bold " key={`tag-${tag}`} data-testid="tag">
                       {tag}&nbsp;{index < tags.length - 1 && "| "}
                     </code>
                   );

@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import ModalContent from "./modalContent";
 
 interface IModalButtonProps {
-  src: string;
+  src?: string;
+  content?: string;
   children: React.ReactNode;
 }
 
-const ModalButton = ({ children, src }: IModalButtonProps) => {
+const ModalButton = ({ children, src, content }: IModalButtonProps) => {
   const [showModal, setShowModal] = useState(false);
   const closeModal = () => setShowModal(false);
   return (
@@ -20,7 +21,12 @@ const ModalButton = ({ children, src }: IModalButtonProps) => {
           {children}
         </button>
       </div>
-      {showModal && <ModalContent src={src} closeModal={closeModal} />}
+      {showModal && (
+        <ModalContent closeModal={closeModal}>
+          {src && <img src={src} className="max-h-screen max-w-screen p-4" />}
+          {content && <div>{content}</div>}
+        </ModalContent>
+      )}
     </>
   );
 };

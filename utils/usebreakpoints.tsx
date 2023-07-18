@@ -42,4 +42,4 @@ function useBreakPoints() {
   return breakpoint;
 }
 
-export default useBreakPoints;
+export { useBreakPoints };

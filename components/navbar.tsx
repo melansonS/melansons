@@ -5,10 +5,10 @@ import { useRouter } from "next/router";
 import DarkmodeToggle from "./darkModeToggle";
 
 interface INavbarProps {
-  bareBones: boolean;
+  bareBones?: boolean;
 }
 
-export default function Navbar({ bareBones }: INavbarProps) {
+export default function Navbar({ bareBones = false }: INavbarProps) {
   const [showMenu, setShowMenu] = useState(false);
   const router = useRouter();
 
@@ -28,14 +28,18 @@ export default function Navbar({ bareBones }: INavbarProps) {
             aria-label="toggle navigation menu"
             className="relative h-10 w-10 z-20"
             onClick={() => setShowMenu(!showMenu)}
+            data-testid="navmenu-toggle-button"
           >
-            <div className={`hamburger ${showMenu ? "activeHamburger" : ""}`}></div>
+            <div
+              className={`hamburger ${showMenu ? "activeHamburger" : ""}`}
+              data-testid="menu-hamburger"
+            ></div>
           </button>
         )}
       </div>
       <h4 className="text-3xl md:text-5xl py-1 grow text-right">melanson[s]</h4>
       <DarkmodeToggle />
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait">
         {showMenu && <NavMenu toggleShowMenu={toggleShowMenu} />}
       </AnimatePresence>
     </header>
