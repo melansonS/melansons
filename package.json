@@ -8,10 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "test:watch": "jest --watch", 
+    "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
+    "@next/react-refresh-utils": "^14.2.3",
     "framer-motion": "^10.12.16",
     "gray-matter": "^4.0.3",
     "markdown-it": "^12.3.2",
