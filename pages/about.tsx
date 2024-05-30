@@ -8,8 +8,8 @@ const About: NextPage = () => {
       <div>
         <PageTitle content="About" />
         <p>
-          I am a Montreal based software developer. But beyond that, I am also a Music loving, Music
-          playing, Book reading, Sunshine seeking, Game playing, Netflix binging kind of guy. I am
+          I am a Montreal based software developer. Beyond that, I am also a Music loving, Music
+          playing, Book reading, Sunshine seeking, Game playing, Bike riding kind of guy. I am
           Creative and Curious, Confident and Caring, and much more still.
         </p>
         <br></br>
